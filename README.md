@@ -18,7 +18,7 @@
     - 이동하셨다면 아래 명령어를 따라 입력해보세요!
         * 이따가 또 다른 명령어를 입력해야 하니, 명령 프롬포트 (터미널)을 아예 닫지는 말아주세요!
     ```
-    git clone https://github.com/Gachon-UMC/https://github.com/Gachon-UMC/7th_UMC_Android
+    git clone https://github.com/Gachon-UMC/7th_UMC_Android
     ```
     <img width="800" alt="clone_example" src="https://user-images.githubusercontent.com/3215313/158018063-d3115ca0-aeda-4198-aba5-bb5d55206271.png">
 
