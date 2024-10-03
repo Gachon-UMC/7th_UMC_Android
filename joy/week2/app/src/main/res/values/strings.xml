@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">week2</string>
+    <string name="background">종이 질감</string>
+    <string name="main_text">티켓</string>
+    <string name="home_icon">홈</string>
+    <string name="pen_icon">펜</string>
+    <string name="calender_icon">달력</string>
+    <string name="my_icon">사람</string>
+    <string name="alert">알람</string>
+    <string name="date">날짜</string>
+    <string name="ment">멘트</string>
+    <string name="post_title">글쓰기 화면</string>
+    <string name="calender_title">날짜 화면</string>
+    <string name="profile_title">마이 페이지</string>
+    <string name="splash_first">스플래시 화면1</string>
+    <string name="splash_second">스플래시 화면2</string>
+    <string name="home">홈</string>
+    <string name="category">카테고리</string>
+    <string name="search">검색</string>
+    <string name="text_holder">검색어를 입력해주세요</string>
+    <string name="my">마이</string>
+
+    <string name="musical">뮤지컬</string>
+    <string name="concert">콘서트</string>
+    <string name="sports">스포츠</string>
+    <string name="classic">클래식/무용</string>
+    <string name="play">연극</string>
+    <string name="camping">레저/캠핑</string>
+    <string name="family">아동/가족</string>
+    <string name="exhibition">전시/행사</string>
+    <string name="toping">TOPING</string>
+    <string name="foriegn">해외 공연</string>
+</resources>
