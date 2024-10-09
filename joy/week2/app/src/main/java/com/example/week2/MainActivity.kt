@@ -3,10 +3,7 @@ package com.example.week2
 import android.graphics.Color
 import android.os.Bundle
 import android.view.View
-import android.view.Window
-import android.view.WindowInsetsController
 import androidx.appcompat.app.AppCompatActivity
-
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsControllerCompat
 import androidx.navigation.NavController

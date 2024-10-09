@@ -473,7 +473,6 @@
                 android:layout_marginBottom="20dp"
                 android:text="인터파크 PLAY"/>
 
-
         </LinearLayout>
 
     </ScrollView>
