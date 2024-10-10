@@ -48,6 +48,8 @@ class HomeFragment : Fragment() {
 
         pannelAdapter.addFragment(PannelFragment(R.drawable.img_first_album_default))
         pannelAdapter.addFragment(PannelFragment(R.drawable.img_album_exp2))
+        pannelAdapter.addFragment(PannelFragment(R.drawable.img_album_exp3))
+        pannelAdapter.addFragment(PannelFragment(R.drawable.img_album_exp4))
         binding.homeViewPager.adapter = pannelAdapter
         binding.homeViewPager.orientation = ViewPager2.ORIENTATION_HORIZONTAL
 
