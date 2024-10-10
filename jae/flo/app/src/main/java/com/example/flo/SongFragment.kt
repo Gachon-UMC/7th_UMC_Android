@@ -18,6 +18,14 @@ class SongFragment : Fragment() {
     ): View? {
         binding = FragmentSongBinding.inflate(inflater,container,false)
 
+        binding.songMixoffTg.setOnClickListener {
+            if (binding.songMixoffTg.drawable.constantState == resources.getDrawable(R.drawable.btn_toggle_off).constantState) {
+                binding.songMixoffTg.setImageResource(R.drawable.btn_toggle_on)
+            } else {
+                binding.songMixoffTg.setImageResource(R.drawable.btn_toggle_off)
+            }
+        }
+
         return binding.root
     }
 }

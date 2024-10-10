@@ -20,6 +20,43 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/home_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="430dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <me.relex.circleindicator.CircleIndicator3
+            android:id="@+id/home_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            app:ci_width="5dp"
+            app:ci_height="5dp"
+            app:ci_margin="4dp"
+            app:ci_drawable="@color/gray_color"
+            app:ci_drawable_unselected="@color/select_color"
+            app:ci_animator="@animator/scale_with_alpha"
+            app:ci_orientation="horizontal"
+            app:ci_gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/home_view_pager"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/home_pannel_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:text="포근하게 덮어주는 꿈의\n목소리"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/home_pannel_btn_nugu_iv" />
+
         <ImageView
             android:id="@+id/home_pannel_btn_nugu_iv"
             android:layout_width="35dp"
@@ -49,19 +86,6 @@
             android:src="@drawable/btn_main_setting"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/home_pannel_title_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="15dp"
-            android:text="포근하게 덮어주는 꿈의\n목소리"
-            android:textColor="@color/white"
-            android:textSize="28sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/home_pannel_btn_nugu_iv" />
 
         <ImageView
             android:id="@+id/home_pannel_btn_play_iv"
