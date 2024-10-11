@@ -37,6 +37,14 @@ class AlbumFragment : Fragment() {
             tab.text = information[position]
         }.attach()
 
+        binding.albumLikeOffIv.setOnClickListener {
+            if (binding.albumLikeOffIv.drawable.constantState == resources.getDrawable(R.drawable.ic_my_like_off).constantState) {
+                binding.albumLikeOffIv.setImageResource(R.drawable.ic_my_like_on)
+            } else {
+                binding.albumLikeOffIv.setImageResource(R.drawable.ic_my_like_off)
+            }
+        }
+
         return binding.root
     }
 }

@@ -58,7 +58,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="라일락"
+        android:text="관객이 될게"
         android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -93,7 +93,7 @@
         android:layout_height="280dp"
         android:layout_marginTop="20dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/img_album_exp2"
+        android:src="@drawable/img_album_exp1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/song_singer_more_iv" />
@@ -103,7 +103,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="나라는 꽃가루에"
+        android:text="잔뜩 찡그려 웃는 버릇이나"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="@+id/song_album_iv"
         app:layout_constraintStart_toStartOf="@+id/song_album_iv"
@@ -114,7 +114,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="눈이 따끔해 아야"
+        android:text="자주 고르는 단어 하나하나"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="@+id/song_music_lyrics_01_iv"
         app:layout_constraintStart_toStartOf="@+id/song_music_lyrics_01_iv"
@@ -180,7 +180,7 @@
         android:id="@+id/song_end_time_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="03:35"
+        android:text="03:13"
         android:textColor="@color/gray_color"
         app:layout_constraintEnd_toEndOf="@+id/song_progressbar_backgroud_view"
         app:layout_constraintTop_toBottomOf="@+id/song_progressbar_backgroud_view" />
@@ -204,10 +204,17 @@
             android:src="@drawable/btn_miniplayer_previous" />
 
         <ImageView
-            android:id="@+id/song_miniplayer_iv"
+            android:id="@+id/song_miniplayer_play_iv"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:src="@drawable/btn_miniplayer_play" />
+
+        <ImageView
+            android:id="@+id/song_miniplayer_pause_iv"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/btn_miniplay_pause"
+            android:visibility="gone" />
 
         <ImageView
             android:id="@+id/song_next_iv"
