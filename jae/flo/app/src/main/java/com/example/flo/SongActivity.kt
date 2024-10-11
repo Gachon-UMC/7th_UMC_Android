@@ -17,37 +17,21 @@ class SongActivity : AppCompatActivity() {
         binding = ActivitySongBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        if (intent.hasExtra("title") && intent.hasExtra("singer")) {
+            binding.songMusicTitleTv.text = intent.getStringExtra("title")
+            binding.songSingerNameTv.text = intent.getStringExtra("singer")
+        }
+
         binding.songDownIb.setOnClickListener {
             finish()
         }
 
-        binding.songRepeatIv.setOnTouchListener { view, event ->
-            when (event.action) {
-                MotionEvent.ACTION_DOWN -> {
-                    view.setBackgroundColor(Color.LTGRAY)
-                    true
-                }
-                MotionEvent.ACTION_UP, MotionEvent.ACTION_CANCEL -> {
-                    view.setBackgroundColor(Color.TRANSPARENT)
-                    true
-                }
-                else -> false
+        binding.songMiniplayerPlayIv.setOnClickListener {
+            if (binding.songMiniplayerPlayIv.drawable.constantState == resources.getDrawable(R.drawable.btn_miniplayer_play).constantState) {
+                binding.songMiniplayerPlayIv.setImageResource(R.drawable.btn_miniplay_pause)
+            } else {
+                binding.songMiniplayerPlayIv.setImageResource(R.drawable.btn_miniplayer_play)
             }
         }
-
-        binding.songRandomIv.setOnTouchListener { view, event ->
-            when (event.action) {
-                MotionEvent.ACTION_DOWN -> {
-                    view.setBackgroundColor(Color.LTGRAY)
-                    true
-                }
-                MotionEvent.ACTION_UP, MotionEvent.ACTION_CANCEL -> {
-                    view.setBackgroundColor(Color.TRANSPARENT)
-                    true
-                }
-                else -> false
-            }
-        }
-
     }
 }

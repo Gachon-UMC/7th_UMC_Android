@@ -15,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="430dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/img_first_album_default"
+            android:src="@drawable/img_album_exp1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -35,8 +35,8 @@
             app:ci_width="5dp"
             app:ci_height="5dp"
             app:ci_margin="4dp"
-            app:ci_drawable="@color/gray_color"
-            app:ci_drawable_unselected="@color/select_color"
+            app:ci_drawable="@drawable/black_radius"
+            app:ci_drawable_unselected="@drawable/black_radius"
             app:ci_animator="@animator/scale_with_alpha"
             app:ci_orientation="horizontal"
             app:ci_gravity="center"
@@ -50,9 +50,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="15dp"
-            android:text="포근하게 덮어주는 꿈의\n목소리"
+            android:text="기어코 승리를 이룬 그녀에 대하여\nSALUTE"
             android:textColor="@color/white"
-            android:textSize="28sp"
+            android:textSize="25sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/home_pannel_btn_nugu_iv" />
@@ -102,12 +102,11 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginBottom="12dp"
-            android:text="총 15곡 2019.11.11"
+            android:text="총 26곡 24.09.22"
             android:textColor="@color/white"
             android:textSize="12sp"
             app:layout_constraintBottom_toTopOf="@id/home_pannel_album_img_01_iv"
             app:layout_constraintStart_toStartOf="parent" />
-
 
         <ImageView
             android:id="@+id/home_pannel_album_img_01_iv"
@@ -115,7 +114,7 @@
             android:layout_height="40dp"
             android:layout_marginStart="20dp"
             android:layout_marginBottom="30dp"
-            android:src="@drawable/img_album_exp"
+            android:src="@drawable/img_album_exp1"
             app:layout_constraintBottom_toTopOf="@id/home_pannel_album_img_02_iv"
             app:layout_constraintStart_toStartOf="parent" />
 
@@ -124,7 +123,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
-            android:text="잠이 안온다"
+            android:text="홀씨"
             android:textColor="@color/white"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@id/home_pannel_album_singer_02_tv"
@@ -136,7 +135,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
-            android:text="젠(zen)"
+            android:text="아이유 (IU)"
             android:textColor="@color/white"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@id/home_pannel_album_img_01_iv"
@@ -150,7 +149,7 @@
             android:layout_height="40dp"
             android:layout_marginStart="20dp"
             android:layout_marginBottom="30dp"
-            android:src="@drawable/img_album_exp"
+            android:src="@drawable/img_album_exp4"
             app:layout_constraintBottom_toBottomOf="@id/home_pannel_background_iv"
             app:layout_constraintStart_toStartOf="parent" />
 
@@ -159,7 +158,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
-            android:text="잠이 안온다"
+            android:text="잼잼"
             android:textColor="@color/white"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@id/home_pannel_album_singer_04_tv"
@@ -171,7 +170,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
-            android:text="젠(zen)"
+            android:text="아이유 (IU)"
             android:textColor="@color/white"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@id/home_pannel_album_img_02_iv"
@@ -270,7 +269,111 @@
                                     android:layout_width="150dp"
                                     android:layout_height="150dp"
                                     android:scaleType="fitCenter"
+                                    android:src="@drawable/img_album_exp1"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_marginEnd="8dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:src="@drawable/widget_black_play"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="The Winning"
+                                android:layout_marginTop="10dp"
+                                android:textSize="16sp"
+                                android:textColor="@color/black"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp"
+                                android:text="아이유 (IU)"
+                                android:textSize="13sp"
+                                android:textColor="#a8a8a8"/>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:orientation="vertical">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:id="@+id/home_album_img_iv2"
+                                    android:layout_width="150dp"
+                                    android:layout_height="150dp"
+                                    android:scaleType="fitCenter"
                                     android:src="@drawable/img_album_exp2"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_marginEnd="8dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:src="@drawable/widget_black_play"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="strawberry moon"
+                                android:layout_marginTop="10dp"
+                                android:textSize="16sp"
+                                android:textColor="@color/black"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp"
+                                android:text="아이유 (IU)"
+                                android:textSize="13sp"
+                                android:textColor="#a8a8a8"/>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:orientation="vertical">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:id="@+id/home_album_img_iv3"
+                                    android:layout_width="150dp"
+                                    android:layout_height="150dp"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/img_album_exp3"
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
@@ -307,22 +410,43 @@
 
                         </LinearLayout>
 
-
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="20dp"
                             android:orientation="vertical">
-                            <ImageView
-                                android:layout_width="150dp"
-                                android:layout_height="150dp"
-                                android:scaleType="fitCenter"
-                                android:src="@drawable/img_album_exp"
-                                />
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:id="@+id/home_album_img_iv4"
+                                    android:layout_width="150dp"
+                                    android:layout_height="150dp"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/img_album_exp4"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_marginEnd="8dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:src="@drawable/widget_black_play"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="제목"
+                                android:text="Palette"
                                 android:layout_marginTop="10dp"
                                 android:textSize="16sp"
                                 android:textColor="@color/black"/>
@@ -331,29 +455,50 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="3dp"
-                                android:text="가수명"
+                                android:text="아이유 (IU)"
                                 android:textSize="13sp"
                                 android:textColor="#a8a8a8"/>
 
 
                         </LinearLayout>
 
-
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="20dp"
                             android:orientation="vertical">
-                            <ImageView
-                                android:layout_width="150dp"
-                                android:layout_height="150dp"
-                                android:scaleType="fitCenter"
-                                android:src="@drawable/img_album_exp"
-                                />
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:id="@+id/home_album_img_iv5"
+                                    android:layout_width="150dp"
+                                    android:layout_height="150dp"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/img_album_exp5"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_marginEnd="8dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:src="@drawable/widget_black_play"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="제목"
+                                android:text="밤편지"
                                 android:layout_marginTop="10dp"
                                 android:textSize="16sp"
                                 android:textColor="@color/black"/>
@@ -362,12 +507,65 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="3dp"
-                                android:text="가수명"
+                                android:text="아이유 (IU)"
                                 android:textSize="13sp"
                                 android:textColor="#a8a8a8"/>
 
 
                         </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:orientation="vertical">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:id="@+id/home_album_img_iv6"
+                                    android:layout_width="150dp"
+                                    android:layout_height="150dp"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/img_album_exp6"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_marginEnd="8dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:src="@drawable/widget_black_play"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="마음"
+                                android:layout_marginTop="10dp"
+                                android:textSize="16sp"
+                                android:textColor="@color/black"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp"
+                                android:text="아이유 (IU)"
+                                android:textSize="13sp"
+                                android:textColor="#a8a8a8"/>
+
+
+                        </LinearLayout>
+
                     </LinearLayout>
                 </HorizontalScrollView>
 
