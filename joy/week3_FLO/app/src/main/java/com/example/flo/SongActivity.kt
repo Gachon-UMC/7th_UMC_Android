@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Toast
 import androidx.core.view.WindowInsetsControllerCompat
 import com.example.flo.databinding.ActivitySongBinding
 
@@ -20,6 +21,7 @@ class SongActivity: AppCompatActivity() {
 
         binding.nuguBtnDownIv.setOnClickListener {
             finish()
+            Toast.makeText(this, intent.getStringExtra("title"), Toast.LENGTH_SHORT).show()
         }
 
         binding.nuguBtnPlayIv.setOnClickListener {
