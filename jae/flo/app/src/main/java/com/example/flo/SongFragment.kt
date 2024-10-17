@@ -21,7 +21,8 @@ class SongFragment : Fragment() {
         binding.songMixoffTg.setOnClickListener {
             if (binding.songMixoffTg.drawable.constantState == resources.getDrawable(R.drawable.btn_toggle_off).constantState) {
                 binding.songMixoffTg.setImageResource(R.drawable.btn_toggle_on)
-            } else {
+            }
+            else {
                 binding.songMixoffTg.setImageResource(R.drawable.btn_toggle_off)
             }
         }

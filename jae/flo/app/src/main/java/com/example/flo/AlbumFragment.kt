@@ -40,7 +40,8 @@ class AlbumFragment : Fragment() {
         binding.albumLikeOffIv.setOnClickListener {
             if (binding.albumLikeOffIv.drawable.constantState == resources.getDrawable(R.drawable.ic_my_like_off).constantState) {
                 binding.albumLikeOffIv.setImageResource(R.drawable.ic_my_like_on)
-            } else {
+            }
+            else {
                 binding.albumLikeOffIv.setImageResource(R.drawable.ic_my_like_off)
             }
         }

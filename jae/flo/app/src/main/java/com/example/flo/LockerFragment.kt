@@ -31,7 +31,9 @@ class LockerFragment : Fragment() {
 //        }
 
         val lockerAdapter = LockerVPAdapter(this)
+
         binding.lockerVp.adapter = lockerAdapter
+
         TabLayoutMediator(binding.lockerTb, binding.lockerVp){
                 tab, position ->
             tab.text = information[position]

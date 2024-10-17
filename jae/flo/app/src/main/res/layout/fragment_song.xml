@@ -4,7 +4,6 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -16,11 +15,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
 
             <LinearLayout
                 android:id="@+id/song_mix_layout"
@@ -60,7 +57,6 @@
                     android:src="@drawable/btn_toggle_on"
                     android:visibility="gone" />
 
-
             </LinearLayout>
 
             <ImageView
@@ -83,7 +79,6 @@
                 app:layout_constraintBottom_toBottomOf="@+id/song_all_select_iv"
                 app:layout_constraintStart_toEndOf="@+id/song_all_select_iv"
                 app:layout_constraintTop_toTopOf="@+id/song_all_select_iv" />
-
 
             <ImageView
                 android:id="@+id/song_all_listen_iv"
@@ -115,7 +110,6 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/song_all_select_tv">
-
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/song_shopper_layout"
@@ -192,7 +186,6 @@
                         app:layout_constraintBottom_toBottomOf="@+id/song_singer_name_01_tv"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="@+id/song_music_title_01_tv" />
-
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -366,7 +359,6 @@
                         app:layout_constraintStart_toEndOf="@+id/song_list_order_04_tv"
                         app:layout_constraintTop_toTopOf="@+id/song_list_order_04_tv" />
 
-
                     <TextView
                         android:id="@+id/song_singer_name_04_tv"
                         android:layout_width="wrap_content"
@@ -397,7 +389,6 @@
                         app:layout_constraintBottom_toBottomOf="@+id/song_singer_name_04_tv"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="@+id/song_music_title_04_tv" />
-
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -464,11 +455,9 @@
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
-
             </LinearLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
 
     </androidx.core.widget.NestedScrollView>
 
