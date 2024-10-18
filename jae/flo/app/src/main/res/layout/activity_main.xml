@@ -10,7 +10,6 @@
         android:id="@+id/main_frm"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-
         app:layout_constraintBottom_toTopOf="@id/main_player_cl"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -93,12 +92,10 @@
                 android:src="@drawable/btn_miniplay_pause"
                 android:visibility="gone" />
 
-
             <ImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/btn_miniplayer_next" />
-
 
             <ImageView
                 android:layout_width="25dp"
@@ -106,12 +103,9 @@
                 android:layout_marginHorizontal="15dp"
                 android:src="@drawable/btn_miniplayer_go_list" />
 
-
         </LinearLayout>
 
-
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/main_bnv"

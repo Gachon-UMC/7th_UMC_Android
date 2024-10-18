@@ -6,12 +6,9 @@ import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import com.example.flo.databinding.FragmentHomeBinding
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.viewpager2.widget.ViewPager2
-import com.example.flo.IndicatorAdapter
 
 class HomeFragment : Fragment() {
 
@@ -29,7 +26,6 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
-
         binding.homeAlbumImgIv1.setOnClickListener {
             (activity as MainActivity).supportFragmentManager.beginTransaction()
                 .replace(R.id.main_frm, AlbumFragment())
@@ -52,6 +48,7 @@ class HomeFragment : Fragment() {
         pannelAdapter.addFragment(PannelFragment(R.drawable.img_album_exp4))
         pannelAdapter.addFragment(PannelFragment(R.drawable.img_album_exp5))
         pannelAdapter.addFragment(PannelFragment(R.drawable.img_album_exp6))
+
         binding.homeViewPager.adapter = pannelAdapter
         binding.homeViewPager.orientation = ViewPager2.ORIENTATION_HORIZONTAL
 
@@ -70,13 +67,12 @@ class HomeFragment : Fragment() {
 
             override fun run() {
                 if (currentItem == pannelAdapter.itemCount) {
-                    currentItem = 0 // 마지막 페이지에서 처음으로 돌아감
+                    currentItem = 0
                 }
                 binding.homeViewPager.currentItem = currentItem++
-                handler.postDelayed(this, slideDelay) // 슬라이드 딜레이 설정
+                handler.postDelayed(this, slideDelay)
             }
         }
-        handler.postDelayed(runnable, slideDelay) // 초기 딜레이 설정
+        handler.postDelayed(runnable, slideDelay)
     }
-
 }

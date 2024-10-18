@@ -142,7 +142,6 @@
             app:layout_constraintStart_toEndOf="@id/home_pannel_album_img_01_iv"
             app:layout_constraintTop_toBottomOf="@id/home_pannel_album_title_01_tv" />
 
-
         <ImageView
             android:id="@+id/home_pannel_album_img_02_iv"
             android:layout_width="40dp"
@@ -275,7 +274,6 @@
                                     app:layout_constraintStart_toStartOf="parent"
                                     app:layout_constraintTop_toTopOf="parent" />
 
-
                                 <ImageView
                                     android:layout_width="40dp"
                                     android:layout_height="40dp"
@@ -303,7 +301,6 @@
                                 android:textSize="13sp"
                                 android:textColor="#a8a8a8"/>
 
-
                         </LinearLayout>
 
                         <LinearLayout
@@ -326,7 +323,6 @@
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
                                     app:layout_constraintTop_toTopOf="parent" />
-
 
                                 <ImageView
                                     android:layout_width="40dp"
@@ -355,7 +351,6 @@
                                 android:textSize="13sp"
                                 android:textColor="#a8a8a8"/>
 
-
                         </LinearLayout>
 
                         <LinearLayout
@@ -378,7 +373,6 @@
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
                                     app:layout_constraintTop_toTopOf="parent" />
-
 
                                 <ImageView
                                     android:layout_width="40dp"
@@ -407,7 +401,6 @@
                                 android:textSize="13sp"
                                 android:textColor="#a8a8a8"/>
 
-
                         </LinearLayout>
 
                         <LinearLayout
@@ -430,7 +423,6 @@
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
                                     app:layout_constraintTop_toTopOf="parent" />
-
 
                                 <ImageView
                                     android:layout_width="40dp"
@@ -459,7 +451,6 @@
                                 android:textSize="13sp"
                                 android:textColor="#a8a8a8"/>
 
-
                         </LinearLayout>
 
                         <LinearLayout
@@ -482,7 +473,6 @@
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
                                     app:layout_constraintTop_toTopOf="parent" />
-
 
                                 <ImageView
                                     android:layout_width="40dp"
@@ -511,7 +501,6 @@
                                 android:textSize="13sp"
                                 android:textColor="#a8a8a8"/>
 
-
                         </LinearLayout>
 
                         <LinearLayout
@@ -534,7 +523,6 @@
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
                                     app:layout_constraintTop_toTopOf="parent" />
-
 
                                 <ImageView
                                     android:layout_width="40dp"
@@ -562,7 +550,6 @@
                                 android:text="아이유 (IU)"
                                 android:textSize="13sp"
                                 android:textColor="#a8a8a8"/>
-
 
                         </LinearLayout>
 
@@ -618,7 +605,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="wrap_content"
@@ -800,7 +786,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="wrap_content"
