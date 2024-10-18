@@ -36,6 +36,10 @@ android {
 }
 
 dependencies {
+
+    implementation 'me.relex:circleindicator:2.1.6'
+    implementation "androidx.core:core-splashscreen:1.0.0-beta02"
+
     implementation libs.androidx.core.ktx
     implementation libs.androidx.appcompat
     implementation libs.material

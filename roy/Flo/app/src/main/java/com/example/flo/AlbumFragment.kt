@@ -27,6 +27,7 @@ class AlbumFragment : Fragment() {
                 .commitAllowingStateLoss()
         }
 
+
         val albumAdapter = AlbumVPAdapter(this)
         binding.albumContentVp.adapter = albumAdapter
         TabLayoutMediator(binding.albumContentTb, binding.albumContentVp) { tab, position ->

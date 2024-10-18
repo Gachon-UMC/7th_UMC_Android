@@ -60,7 +60,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="라일락"
+        android:text="제목"
         android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -73,7 +73,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="IU"
+        android:text="가수 이름"
         android:textColor="@color/black"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="@+id/song_music_title_tv"
@@ -169,28 +169,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/song_like_iv_layout"  />
 
-    <!--    <View-->
-    <!--        android:id="@+id/song_progressbar_backgroud_view"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="2dp"-->
-    <!--        android:layout_marginStart="20dp"-->
-    <!--        android:layout_marginTop="15dp"-->
-    <!--        android:layout_marginEnd="20dp"-->
-    <!--        android:background="@color/gray_color"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toBottomOf="@+id/song_like_iv_layout" />-->
-
-    <!--    <View-->
-    <!--        android:id="@+id/song_progressbar_view"-->
-    <!--        android:layout_width="50dp"-->
-    <!--        android:layout_height="2dp"-->
-    <!--        android:layout_marginStart="20dp"-->
-    <!--        android:background="@color/select_color"-->
-    <!--        app:layout_constraintBottom_toBottomOf="@+id/song_progressbar_backgroud_view"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toTopOf="@+id/song_progressbar_backgroud_view" />-->
-
     <TextView
         android:id="@+id/song_start_time_tv"
         android:layout_width="wrap_content"
@@ -205,7 +183,7 @@
         android:id="@+id/song_end_time_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="01:00"
+        android:text="00:00"
         android:textColor="@color/gray_color"
         app:layout_constraintEnd_toEndOf="@+id/song_progress_sb"
         app:layout_constraintTop_toBottomOf="@+id/song_progress_sb" />
