@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground"> @color/transparent</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_flo_logo</item>
+        <item name="android:statusBarColor"> @color/transparent</item>
+        <item name="postSplashScreenTheme">@style/Theme.FLO</item>
+    </style>
+</resources>
