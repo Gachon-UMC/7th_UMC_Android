@@ -1,55 +1,98 @@
 package com.example.flo
 
+import android.media.MediaPlayer
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.flo.databinding.ActivitySongBinding
+import com.google.gson.Gson
 
 class SongActivity : AppCompatActivity() {
 
     lateinit var binding: ActivitySongBinding
     lateinit var song : Song
     lateinit var timer : Timer
+    private var mediaPlayer : MediaPlayer? = null
+    private var gson : Gson = Gson()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySongBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.songRepeatOnIv.visibility = View.GONE
         initSong()
         setPlayer(song)
         initClickListener()
-
         }
 
-    private fun initClickListener(){
+    override fun onPause() {
+        super.onPause()
+        setPlayerStatus(false)
+
+        song.second = (song.playTime * binding.songProgressSb.progress) / 100000
+        val sharedPreferences = getSharedPreferences("song", MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        val songToJson = gson.toJson(song)
+        editor.putString("songData", songToJson)
+        Log.d("songData", songToJson.toString())
+        editor.apply()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        timer.interrupt()
+        mediaPlayer?.release()
+        mediaPlayer = null
+    }
+
+    private fun initClickListener() {
         binding.songDownIb.setOnClickListener {
-            Toast.makeText(this,intent.getStringExtra("title"), Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, intent.getStringExtra("title"), Toast.LENGTH_SHORT).show()
             finish()
         }
+
         binding.songMiniplayerPlayIv.setOnClickListener {
-//            if (binding.songMiniplayerPlayIv.drawable.constantState == resources.getDrawable(R.drawable.btn_miniplayer_play).constantState) {
-//                binding.songMiniplayerPlayIv.setImageResource(R.drawable.btn_miniplay_pause)
-//            } else {
-//                binding.songMiniplayerPlayIv.setImageResource(R.drawable.btn_miniplayer_play)
-//            }
             song.isPlaying = !song.isPlaying
             setPlayerStatus(song.isPlaying)
         }
+
         binding.songMiniplayerPauseIv.setOnClickListener {
             setPlayerStatus(false)
+        }
+
+        binding.songRepeatIv.setOnClickListener {
+            val isRepeatOn = binding.songRepeatOnIv.visibility == View.VISIBLE
+            setRepeatStatus(!isRepeatOn)
+        }
+
+        binding.songRepeatOnIv.setOnClickListener {
+            setRepeatStatus(false)
+        }
+
+        binding.songRandomIv.setOnClickListener {
+            val isRandomOn = binding.songRandomOnIv.visibility == View.VISIBLE
+            setRandomStatus(!isRandomOn)
+        }
+
+        binding.songRandomOnIv.setOnClickListener {
+            setRandomStatus(false)
         }
     }
 
     private fun initSong(){
-        if(intent.hasExtra("title") && intent.hasExtra("singer")) {
-            song = Song(
+        if (intent.hasExtra("title") && intent.hasExtra("singer")) {
+            song = Song (
                 intent.getStringExtra("title")!!,
                 intent.getStringExtra("singer")!!,
                 intent.getIntExtra("second", 0),
                 intent.getIntExtra("playTime", 0),
-                intent.getBooleanExtra("isPlaying", false)
+                intent.getBooleanExtra("isPlaying", false),
+                intent.getStringExtra("music")!!
             )
         }
         startTimer()
@@ -61,8 +104,29 @@ class SongActivity : AppCompatActivity() {
         binding.songStartTimeTv.text = String.format("%02d:%02d",song.second / 60, song.second % 60)
         binding.songEndTimeTv.text = String.format("%02d:%02d",song.playTime / 60, song.playTime % 60)
         binding.songProgressSb.progress = (song.second * 1000 / song.playTime)
-
+        val music = resources.getIdentifier(song.music, "raw", this.packageName)
+        mediaPlayer = MediaPlayer.create(this, music)
         setPlayerStatus(song.isPlaying)
+    }
+
+    private fun setRepeatStatus(isRepeatOn: Boolean) {
+        if (isRepeatOn) {
+            binding.songRepeatIv.visibility = View.GONE
+            binding.songRepeatOnIv.visibility = View.VISIBLE
+        } else {
+            binding.songRepeatIv.visibility = View.VISIBLE
+            binding.songRepeatOnIv.visibility = View.GONE
+        }
+    }
+
+    private fun setRandomStatus(isRandomOn: Boolean) {
+        if (isRandomOn) {
+            binding.songRandomIv.visibility = View.GONE
+            binding.songRandomOnIv.visibility = View.VISIBLE
+        } else {
+            binding.songRandomIv.visibility = View.VISIBLE
+            binding.songRandomOnIv.visibility = View.GONE
+        }
     }
 
     private fun setPlayerStatus(isPlaying: Boolean) {
@@ -72,40 +136,65 @@ class SongActivity : AppCompatActivity() {
         if (isPlaying) {
             binding.songMiniplayerPlayIv.visibility = View.GONE
             binding.songMiniplayerPauseIv.visibility = View.VISIBLE
-        } else {
+            mediaPlayer?.start()
+            startTimer()
+        }
+        else {
             binding.songMiniplayerPlayIv.visibility = View.VISIBLE
             binding.songMiniplayerPauseIv.visibility = View.GONE
+            if (mediaPlayer?.isPlaying == true) {
+                mediaPlayer?.pause()
+                song.second = mediaPlayer?.currentPosition?.div(1000) ?: song.second
+            }
         }
     }
 
     private fun startTimer() {
-        timer = Timer(song.playTime, song.isPlaying)
-        timer.start()
+        if (::timer.isInitialized && timer.isAlive) {
+            timer.isPlaying = song.isPlaying
+        } else {
+            timer = Timer(song.playTime, song.isPlaying)
+            timer.start()
+        }
     }
 
-    inner class Timer(private val playTime: Int, var isPlaying: Boolean = true):Thread() {
-        private var second : Int = 0
-        private var mills : Float = 0f
+    inner class Timer(private val playTime: Int, var isPlaying: Boolean = true) : Thread() {
+        private var mills: Float = (song.second * 1000).toFloat()
+        private var second: Int = song.second
 
         override fun run() {
             super.run()
             while (true) {
+                if (!isPlaying) {
+                    sleep(50)
+                    continue
+                }
+
                 if (second >= playTime) {
+                    runOnUiThread {
+                        mediaPlayer?.pause()
+                        mediaPlayer?.seekTo(0)
+                        binding.songProgressSb.progress = 0
+                        binding.songStartTimeTv.text = String.format("%02d:%02d", 0, 0)
+
+                        if (binding.songRepeatOnIv.visibility == View.VISIBLE) {
+                            setPlayerStatus(true)
+                        } else {
+                            setPlayerStatus(false)
+                        }
+                    }
                     break
                 }
-                if (isPlaying) {
-                    sleep(50)
-                    mills += 50
 
-                    runOnUiThread {
-                        binding.songProgressSb.progress = ((mills / playTime) * 100).toInt()
-                    }
-                    if (mills % 1000 == 0f) {
-                        runOnUiThread {
-                            binding.songStartTimeTv.text = String.format("%02d:%02d", second / 60, second % 60)
-                        }
-                        second++
-                    }
+                sleep(50)
+                mills += 50
+
+                runOnUiThread {
+                    binding.songProgressSb.progress = ((mills / (playTime * 1000)) * 10000).toInt()
+                    binding.songStartTimeTv.text = String.format("%02d:%02d", second / 60, second % 60)
+                }
+                if (mills % 1000 == 0f) {
+                    second++
                 }
             }
         }
