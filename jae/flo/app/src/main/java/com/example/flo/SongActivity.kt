@@ -159,7 +159,7 @@ class SongActivity : AppCompatActivity() {
     }
 
     inner class Timer(private val playTime: Int, var isPlaying: Boolean = true) : Thread() {
-        private var mills: Float = (song.second * 1000).toFloat()  // 현재 재생 위치에서 시작
+        private var mills: Float = (song.second * 1000).toFloat()
         private var second: Int = song.second
 
         override fun run() {
@@ -170,18 +170,17 @@ class SongActivity : AppCompatActivity() {
                     continue
                 }
 
-                if (second >= playTime) {  // 곡이 끝난 경우
+                if (second >= playTime) {
                     runOnUiThread {
                         mediaPlayer?.pause()
                         mediaPlayer?.seekTo(0)
                         binding.songProgressSb.progress = 0
                         binding.songStartTimeTv.text = String.format("%02d:%02d", 0, 0)
 
-                        // 반복 재생 확인
                         if (binding.songRepeatOnIv.visibility == View.VISIBLE) {
-                            setPlayerStatus(true)  // 반복 재생
+                            setPlayerStatus(true)
                         } else {
-                            setPlayerStatus(false)  // 재생 중지
+                            setPlayerStatus(false)
                         }
                     }
                     break
@@ -194,13 +193,10 @@ class SongActivity : AppCompatActivity() {
                     binding.songProgressSb.progress = ((mills / (playTime * 1000)) * 10000).toInt()
                     binding.songStartTimeTv.text = String.format("%02d:%02d", second / 60, second % 60)
                 }
-
-
                 if (mills % 1000 == 0f) {
                     second++
                 }
             }
         }
     }
-
 }
