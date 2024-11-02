@@ -51,8 +51,6 @@ class SongActivity : AppCompatActivity() {
 
 
 
-
-
         initSong()
         setPlayer(song)
 
@@ -89,6 +87,12 @@ class SongActivity : AppCompatActivity() {
         }
     }
 
+
+
+
+
+
+
     override fun onPause() {
         super.onPause()
         setPlayerStatus(false)
@@ -97,34 +101,19 @@ class SongActivity : AppCompatActivity() {
         currentSecond = mediaPlayer?.currentPosition?.div(1000) ?: 0 // 밀리초를 초로 변환
         song.second = currentSecond // song 객체에 저장
 
-
         song.second = (song.playTime * binding.songProgressSb.progress) / 100000
 
         val sharedPreferences = getSharedPreferences("song", MODE_PRIVATE)
         val editor = sharedPreferences.edit()
         val songToJson = gson.toJson(song)
+
         editor.putInt("currentSecond", currentSecond)
+        editor.putInt("seekBarProgress", binding.songProgressSb.progress)  // SeekBar 진행 상태 저장
         editor.putString("songData", songToJson)
         editor.apply()
 
     }
 
-    override fun onResume() {
-        super.onResume()
-        // SharedPreferences에서 데이터 불러오기
-        val sharedPreferences = getSharedPreferences("song", MODE_PRIVATE)
-        val savedCurrentSecond = sharedPreferences.getInt("currentSecond", 0)
-
-        // 저장된 재생 시간이 있을 경우 해당 시간부터 음악을 재생
-        if (savedCurrentSecond > 0) {
-            mediaPlayer?.seekTo(savedCurrentSecond * 1000) // 밀리초 단위로 이동
-            setPlayerStatus(true) // 음악 재생
-
-            if (!timer.isAlive) {
-                startTimer() // 타이머가 종료된 경우 새로 시작
-            }
-        }
-    }
 
     override fun onDestroy() {
         super.onDestroy()
@@ -167,10 +156,8 @@ class SongActivity : AppCompatActivity() {
             if (isRepeatActive) {
                 mediaPlayer?.seekTo(0)
                 mediaPlayer?.start()
-                resetTimerAndSeekBar()
             } else {
                 setPlayerStatus(false)
-                resetTimerAndSeekBar()
             }
         }
 
@@ -179,18 +166,34 @@ class SongActivity : AppCompatActivity() {
         // 재생 버튼 클릭 이벤트 처리
         binding.songMiniplayerIv.setOnClickListener {
             if (!song.isPlaying) {
-                mediaPlayer?.seekTo(0)
+                mediaPlayer?.seekTo(song.second * 1000) // 현재 재생 위치로 이동
                 setPlayerStatus(true)
-                resetTimerAndSeekBar()
             }
         }
     }
 
-    private fun resetTimerAndSeekBar() {
-        binding.songProgressSb.progress = 0 // SeekBar 초기화
-        timer.interrupt() // 기존 타이머 중지
-        startTimer() // 새 타이머 시작
+    override fun onResume() {
+        super.onResume()
+        // SharedPreferences에서 데이터 불러오기
+        val sharedPreferences = getSharedPreferences("song", MODE_PRIVATE)
+        val savedCurrentSecond = sharedPreferences.getInt("currentSecond", 0)
+        val savedSeekBarProgress = sharedPreferences.getInt("seekBarProgress", 0)
+
+        // 저장된 재생 시간이 있을 경우 해당 시간부터 음악을 재생
+        if (savedCurrentSecond > 0) {
+            mediaPlayer?.seekTo(savedCurrentSecond * 1000) // 밀리초 단위로 이동
+
+            binding.songProgressSb.progress = savedSeekBarProgress // SeekBar의 진행 상태 복원
+            binding.songStartTimeTv.text =
+                String.format("%02d:%02d", savedCurrentSecond / 60, savedCurrentSecond % 60) // 시간 업데이트
+
+            if (song.isPlaying) {
+                setPlayerStatus(true) // song이 재생 중일 때만 자동 재생
+            }
+        }
     }
+
+
 
     fun setPlayerStatus(isPlaying: Boolean) {
         song.isPlaying = isPlaying
@@ -199,7 +202,12 @@ class SongActivity : AppCompatActivity() {
         if (isPlaying) {
             binding.songMiniplayerIv.visibility = View.GONE
             binding.songPauseIv.visibility = View.VISIBLE
-            mediaPlayer?.start()
+
+
+            if (mediaPlayer?.isPlaying == false) {
+                mediaPlayer?.start()
+            }
+
 
         } else {
             binding.songMiniplayerIv.visibility = View.VISIBLE
@@ -211,6 +219,10 @@ class SongActivity : AppCompatActivity() {
         }
     }
 
+
+
+
+
     private fun startTimer() {
         timer = Timer(song.playTime, song.isPlaying)
         timer.start()
@@ -218,8 +230,8 @@ class SongActivity : AppCompatActivity() {
 
     inner class Timer(private val playTime: Int, var isPlaying: Boolean = true) : Thread() {
 
-        private var second: Int = 0
-        private var mills: Float = 0f
+        internal var second: Int = 0
+        internal var mills: Float = 0f
 
         override fun run() {
             super.run()
@@ -247,5 +259,12 @@ class SongActivity : AppCompatActivity() {
                 Log.d("Song", "쓰레드가 죽었습니다. ${e.message}")
             }
         }
+        fun setTime(savedSecond: Int, savedMillis: Float) {
+            this.second = savedSecond
+            this.mills = savedMillis
+        }
     }
+
+
+
 }
