@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/horizontal_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/album_info_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:paddingEnd="10dp">
+
+                <TextView
+                    android:id="@+id/album_title_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="앨범명"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimaryBlack"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/album_artist_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:text="아티스트"
+                    android:textColor="@color/colorPrimaryBlack"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:paddingBottom="5dp"
+                    app:layout_constraintTop_toBottomOf="@id/album_title_tv"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <TextView
+                    android:id="@+id/album_distributor_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimaryBlack"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                    android:text="유통사"
+                    android:paddingBottom="5dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/album_artist_tv"/>
+
+                <TextView
+                    android:id="@+id/album_agency_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimaryBlack"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                    android:text="기획사"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/album_distributor_tv"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/album_info_view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/album_title_detail_tv"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="17sp"
+                    android:textColor="@color/bold_gray_color"
+                    android:text="영화 대도시의 사랑법 (Original Motion Picture SoundTrack)"
+                    android:breakStrategy="simple"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:paddingBottom="5dp"/>
+
+                <TextView
+                    android:id="@+id/album_artist_detail_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Various Artists"
+                    android:textColor="@color/bold_gray_color"
+                    android:textSize="17sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/album_title_detail_tv"
+                    android:paddingBottom="5dp"/>
+
+                <TextView
+                    android:id="@+id/album_distributor_detail_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/bold_gray_color"
+                    android:textSize="17sp"
+                    android:text="(주)뮤직앤뉴"
+                    android:paddingBottom="5dp"
+                    app:layout_constraintTop_toBottomOf="@id/album_artist_detail_tv"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <TextView
+                    android:id="@+id/album_agency_detail_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SLL"
+                    android:textColor="@color/bold_gray_color"
+                    android:textSize="17sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/album_distributor_detail_tv"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/album_introduce_detail_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/horizontal_view">
+
+            <TextView
+                android:id="@+id/album_introduce_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="앨범 소개"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryBlack"
+                android:textSize="17sp"
+                android:paddingBottom="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/album_introduce_subtitle_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="영화 '대도시의 사랑법' OST 앨범 발매"
+                android:textColor="@color/bold_gray_color"
+                android:textSize="17sp"
+                android:paddingBottom="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/album_introduce_title_tv"/>
+
+            <TextView
+                android:id="@+id/album_introduce_detail_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:text="눈치 보는 법이 없는 자유로운 영혼의 재희(김고은 분)와 세상과 거리 두는 법에 익숙한 흥수(노상현 분)가 동고동락하며 펼치는 그들만의 사랑법을 그린 영화 '대도시의 사랑법'의 OST 앨범이 발매된다.\n\n이번 OST 앨범에는 선공개로 발매된 스텔라장과 샘김이 참여한 가창곡 'La Danse De La Joie)', 'Playing Pretend(플레잉 프리텐드)'외 송트랙 여섯 곡이 함께 수록된다. 'D.P., '사냥의 시간' 등 다수의 드라마 음악 작업에 참여한 바 있는 프라이머리가 음악감독으로 함께해 영화적 재미를 배가한다.\n\n스텔라장의 'La Danse De La Joie'는 3박자 왈츠풍의 사랑스러운 샹송 장르의 곡으로, 극 중재희가 첫사랑에 설레는 장면에 삽입됐다. 또 대학교 축제 속 사랑에 빠진 재희와 흥수의 모습을 그린 곡으로, 풋풋한 무드를 자아낸다. 달콤한 음색으로 재기 발랄한 매력을 전하는 스텔라장이 순수하고 자유로웠던 주인공들의 이야기에 힘을 더한다.\n\n샘김의 'Playing Pretend(플레잉 프리텐드)'는 프라이머리와 샘김이 공동 작업한 곡으로, 청춘의 고저를 잘 겪어낸 재희와 흥수가 30대를 맞이하는 엔딩 장면에 깔렸다. 샘김의 세련된 보이스가 미디엄 템포 팝 사운드와 뛰어난 조화를 이루며 극에 도시적인 분위기를 입혔다.\n\n이밖에도 Die Boy의 'Old love', 'Back to you', 'What Love Looks Like', Jihae Kimm의 'Friends', Meego의 'Sigh', 구름의 'Prologue' 등 송트랙이 극의 서사와 감정을 한층 풍부하게 완성한다. 영화 속 시간의 흐름에 따라 디스코, 알앤비, 인디 록 등 다채로운 장르의 변주가 듣는 재미를 더한다.\n\n특히 청춘의 활기를 담아낸 영화인 만큼 트렌디한 사운드 트랙들이 도시의 세련된 분위기와 주인공들의 내면을 반영하며 극의 몰입감을 100% 끌어올릴 전망이다."
+                android:textColor="@color/bold_gray_color"
+                android:breakStrategy="simple"
+                android:textSize="17sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/album_introduce_subtitle_tv"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
