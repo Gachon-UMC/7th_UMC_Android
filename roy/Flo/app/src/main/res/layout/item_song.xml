@@ -58,6 +58,18 @@
         app:layout_constraintTop_toTopOf="@id/item_song_more_iv"
         app:layout_constraintBottom_toBottomOf="@id/item_song_more_iv"/>
 
+
+    <ImageView
+        android:id="@+id/item_song_pause_iv"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginRight="5dp"
+        app:layout_constraintEnd_toStartOf="@id/item_song_more_iv"
+        app:layout_constraintTop_toTopOf="@id/item_song_more_iv"
+        app:layout_constraintBottom_toBottomOf="@id/item_song_more_iv"
+        android:src="@drawable/btn_miniplay_mvpause"
+        android:visibility="gone" />
+
     <ImageView
         android:id="@+id/item_song_more_iv"
         android:layout_width="30dp"
