@@ -1,5 +1,8 @@
 package com.example.chapter7
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
 @Entity
 data class Profile(
     var name: String,

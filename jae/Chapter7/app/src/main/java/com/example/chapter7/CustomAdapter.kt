@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
+import com.example.chapter7.databinding.ItemLayoutBinding
 
 class CustomAdapter(val list:ArrayList<Profile>, context: Context) : BaseAdapter() {
     var inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE)
@@ -19,7 +20,7 @@ class CustomAdapter(val list:ArrayList<Profile>, context: Context) : BaseAdapter
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
         binding = ItemLayoutBinding.inflate(inflater as LayoutInflater, parent, false)
         binding.text1.text = list[position].name
-        binding.text1.text = list[position].age
+        binding.text2.text = list[position].age
 
         return binding.root
     }
