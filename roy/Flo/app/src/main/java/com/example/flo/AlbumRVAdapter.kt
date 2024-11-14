@@ -49,4 +49,3 @@ class AlbumRVAdapter(private val albumList: ArrayList<Album>) : RecyclerView.Ada
     override fun getItemCount(): Int = albumList.size
 
 }
-

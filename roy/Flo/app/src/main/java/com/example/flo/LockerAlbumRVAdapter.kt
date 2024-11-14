@@ -1,5 +1,6 @@
 package com.example.flo
 
+import android.annotation.SuppressLint
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -56,11 +57,13 @@ class LockerAlbumRVAdapter (private val albumList: ArrayList<Album>) : RecyclerV
         this.itemClickListener = onItemClickListener
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     fun addItem(album: Album){
         albumList.add(album)
         notifyDataSetChanged()
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     fun removeItem(position: Int){
         albumList.removeAt(position)
         notifyDataSetChanged()
