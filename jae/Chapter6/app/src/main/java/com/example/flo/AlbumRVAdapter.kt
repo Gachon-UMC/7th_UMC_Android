@@ -10,7 +10,8 @@ import com.example.flo.databinding.ItemAlbumBinding
 
 class AlbumRVAdapter(
     private val albumList: ArrayList<Album>,
-    private val context: Context
+    private val context: Context,
+    private val songDao: SongDao
 ) : RecyclerView.Adapter<AlbumRVAdapter.ViewHolder>() {
 
     interface MyItemClickListener {
@@ -26,7 +27,6 @@ class AlbumRVAdapter(
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): AlbumRVAdapter.ViewHolder {
         val binding: ItemAlbumBinding = ItemAlbumBinding.inflate(LayoutInflater.from(viewGroup.context), viewGroup, false)
-
         return ViewHolder(binding)
     }
 
@@ -52,7 +52,9 @@ class AlbumRVAdapter(
         holder.binding.itemAlbumPlayBtn.setOnClickListener {
 
 //            mItemClickListener.onItemClick(albumList[position])
-            val firstSong = album.songs?.firstOrNull()
+            val songs = songDao.getSongs().filter { it.albumIdx == album.id }  // albumIdx로 Song 테이블에서 노래 필터링
+
+            val firstSong = songs.firstOrNull()
 
             if (firstSong != null) {
                 (context as? MainActivity)?.setMiniPlayer(firstSong)

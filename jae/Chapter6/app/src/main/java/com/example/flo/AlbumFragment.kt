@@ -42,7 +42,7 @@ class AlbumFragment : Fragment() {
 //            binding.albumArtistTv.text = artistName
 //        }
 
-        val albumAdapter = AlbumVpAdapter(this)
+        val albumAdapter = AlbumVPAdapter(this)
         binding.albumContentVp.adapter = albumAdapter
 
         TabLayoutMediator(binding.albumContentTb, binding.albumContentVp){

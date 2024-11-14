@@ -3,7 +3,7 @@ package com.example.flo
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
 
-class HomePanelVpAdapter(fragment: Fragment) : FragmentStateAdapter(fragment) {
+class HomePanelVPAdapter(fragment: Fragment) : FragmentStateAdapter(fragment) {
 
     private val fragmentList : ArrayList<Fragment> = ArrayList()
 

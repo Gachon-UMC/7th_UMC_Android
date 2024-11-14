@@ -3,6 +3,7 @@ package com.example.flo
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -15,9 +16,11 @@ import com.google.gson.Gson
 class HomeFragment : Fragment() {
 
     lateinit var binding: FragmentHomeBinding
+    private lateinit var songDB: SongDatabase
+    private lateinit var songDao: SongDao
     private var albumDatas = ArrayList<Album>()
 
-    private lateinit var homePanelAdapter: HomePanelVpAdapter
+    private lateinit var homePanelAdapter: HomePanelVPAdapter
     private val slideDelay: Long = 4000
 
     private lateinit var handler: Handler
@@ -30,48 +33,45 @@ class HomeFragment : Fragment() {
     ): View? {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
 
-        albumDatas.apply {
-            add(Album("LILAC", "아이유 (IU)", R.drawable.img_album_cover_5, listOf(
-                Song("라일락", "아이유 (IU)", 0, 60, false, "music_lilac", R.drawable.img_album_cover_5)
-            )))
+        songDB = SongDatabase.getInstance(requireContext())!!
+        songDao = songDB.songDao()
 
-            add(Album("Pallette", "아이유 (IU)", R.drawable.img_album_cover_4, listOf(
-                Song("이 지금", "아이유 (IU)", 0, 60, false, "music_dlwlrma", R.drawable.img_album_cover_4)
-            )))
+        // 더미 데이터 삽입
+        inputDummyAlbums()
 
-            add(Album("Modern Times", "아이유 (IU)", R.drawable.img_album_cover_3, listOf(
-                Song("을의 연애 (WITH 박주원)", "아이유 (IU)", 0, 60, false, "music_loveofb", R.drawable.img_album_cover_3)
-            )))
+        // 데이터베이스에서 앨범 리스트 가져오기
+        albumDatas.addAll(songDB.albumDao().getAlbums())
+        Log.d("albumlist", albumDatas.toString()) // 데이터 확인용 로그
 
-            add(Album("Last Fantasy", "아이유 (IU)", R.drawable.img_album_cover_2, listOf(
-                Song("비밀", "아이유 (IU)", 0, 60, false, "music_secret", R.drawable.img_album_cover_2)
-            )))
+        val albumRVAdapter = AlbumRVAdapter(albumDatas, requireContext(), songDB.songDao())
 
-            add(Album("Growing Up", "아이유 (IU)", R.drawable.img_album_cover_1, listOf(
-                Song("바라보기", "아이유 (IU)", 0, 60, false, "music_lookingatyou", R.drawable.img_album_cover_1)
-            )))
-        }
-
-        val albumRVAdapter = AlbumRVAdapter(albumDatas, requireContext())
         binding.homeTodayMusicAlbumRv.adapter = albumRVAdapter
-        binding.homeTodayMusicAlbumRv.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
 
-        albumRVAdapter.setMyItemClickListener(object: AlbumRVAdapter.MyItemClickListener{
+        albumRVAdapter.setMyItemClickListener(object : AlbumRVAdapter.MyItemClickListener {
             override fun onItemClick(album: Album) {
+                // 앨범 ID로 곡 목록 가져오기
+                val songs = songDao.getSongsByAlbumId(album.id)
+                if (songs.isNotEmpty()) {
+                    val firstSong = songs[0]
+                    // 미니 플레이어 업데이트
+                    (activity as MainActivity).setMiniPlayer(firstSong)
+                    // 첫 번째 곡 재생
+                    (activity as MainActivity).setPlayerStatus(true)
+                }
+                // 프래그먼트 변경
                 changeAlbumFragment(album)
             }
 
             override fun onRemoveAlbum(position: Int) {
                 albumRVAdapter.removeItem(position)
             }
-
-//            override fun onPlayAlbum(album: Album) {
-//                sendData(album)
-//            }
         })
 
+        binding.homeTodayMusicAlbumRv.layoutManager =
+            LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+
         //ViewPager2 설정 (홈 상단 패널)
-        homePanelAdapter = HomePanelVpAdapter(this)
+        homePanelAdapter = HomePanelVPAdapter(this)
         homePanelAdapter.addFragment(HomePanel1Fragment())
         homePanelAdapter.addFragment(HomePanel2Fragment())
         homePanelAdapter.addFragment(HomePanel3Fragment())
@@ -98,15 +98,34 @@ class HomeFragment : Fragment() {
         return binding.root
     }
 
-//    override fun sendData(album: Album) {
-//        if (activity is MainActivity) {
-//            val activity = activity as MainActivity
-//            activity.updateMainPlayerCl(album)
-//        }
-//    }
+    private fun inputDummyAlbums() {
+        val songDB = SongDatabase.getInstance(requireActivity())!!
+        val songs = songDB.albumDao().getAlbums()
+
+        if (songs.isNotEmpty()) return
+
+        songDB.albumDao().insert(
+            Album(5, "IU 5th Album 'LILAC'", "아이유 (IU)", R.drawable.img_album_cover_5)
+        )
+        songDB.albumDao().insert(
+            Album(4, "Palette", "아이유 (IU)", R.drawable.img_album_cover_4)
+        )
+        songDB.albumDao().insert(
+            Album(3, "Modern Times", "아이유 (IU)", R.drawable.img_album_cover_3)
+        )
+        songDB.albumDao().insert(
+            Album(2, "Last Fantasy", "아이유 (IU)", R.drawable.img_album_cover_2)
+        )
+        songDB.albumDao().insert(
+            Album(1, "Growing Up", "아이유 (IU)", R.drawable.img_album_cover_1)
+        )
+
+        val songDBData = songDB.albumDao().getAlbums()
+        Log.d("DB data", songDBData.toString())
+    }
 
     private fun changeAlbumFragment(album: Album) {
-        (context as MainActivity).supportFragmentManager.beginTransaction()
+        (activity as MainActivity).supportFragmentManager.beginTransaction()
             .replace(R.id.main_frm, AlbumFragment().apply {
                 arguments = Bundle().apply {
                     val gson = Gson()
