@@ -19,12 +19,14 @@ import com.google.gson.Gson
 import java.util.Timer
 import kotlin.concurrent.scheduleAtFixedRate
 
-class HomeFragment : Fragment(),CommunicationInterface  {
+class HomeFragment : Fragment(),CommunicationInterface {
 
     private val timer = Timer()
     private val handler = Handler(Looper.getMainLooper())
     lateinit var binding: FragmentHomeBinding
     private var albumDatas = ArrayList<Album>()
+    private lateinit var songDB: SongDatabase
+
 
 
 
@@ -34,24 +36,14 @@ class HomeFragment : Fragment(),CommunicationInterface  {
         savedInstanceState: Bundle?
     ): View? {
 
+        inputDummyAlbums()
 
         binding = FragmentHomeBinding.inflate(inflater, container, false)
 
 
-        albumDatas.apply {
-            add(Album("APT.", "로제 & Bruno Mars", R.drawable.img_album_apt, R.raw.music_apt))
-            add(Album("HAPPY", "데이식스 (DAY6)", R.drawable.img_album_happy, R.raw.music_happy))
-            add(Album("POWER", "G-DRAGON", R.drawable.img_album_power, R.raw.music_power))
-            add(Album("내 이름 맑음", "QWER", R.drawable.img_album_qwer, R.raw.music_blossom))
-            add(Album("Whiplash", "에스파 (AESPA)", R.drawable.img_album_whiplash, R.raw.music_whiplash))
-            add(Album("Welcome to the Show", "데이식스 (DAY6)", R.drawable.img_album_happy, R.raw.music_welcometotheshow))
-            add(Album("Butter", "방탄소년단 (BTS)", R.drawable.img_album_exp, R.raw.music_butter))
-            add(Album("Lilac", "아이유 (IU)", R.drawable.img_album_exp2, R.raw.music_lilac))
-            add(Album("Next Level", "에스파 (AESPA)", R.drawable.img_album_exp3, R.raw.music_next))
-            add(Album("Boy with Luv", "방탄소년단 (BTS)", R.drawable.img_album_exp4, R.raw.music_boy))
-            add(Album("BBoom BBoom", "모모랜드 (MOMOLAND)", R.drawable.img_album_exp5, R.raw.music_bboom))
-            add(Album("Weekend", "태연 (Tae Yeon)", R.drawable.img_album_exp6, R.raw.music_blossom))
-        }
+        songDB = SongDatabase.getInstance(requireContext())!!
+        albumDatas.addAll(songDB.albumDao().getAlbums())
+        Log.d("albumlist", albumDatas.toString())
 
 
         val albumRVAdapter = AlbumRVAdapter(albumDatas)
@@ -101,6 +93,105 @@ class HomeFragment : Fragment(),CommunicationInterface  {
     }
 
 
+
+    private fun inputDummyAlbums(){
+        val songDB = SongDatabase.getInstance(requireActivity())!!
+        val songs = songDB.albumDao().getAlbums()
+
+        if (songs.isNotEmpty()) return
+
+        songDB.albumDao().insert(
+            Album(
+                6,
+                "IU 5th Album 'LILAC'",
+                "아이유 (IU)",
+                R.drawable.img_album_exp2
+            )
+        )
+
+        songDB.albumDao().insert(
+            Album(
+                7,
+                "Butter",
+                "방탄소년단 (BTS)",
+                R.drawable.img_album_exp
+            )
+        )
+
+        songDB.albumDao().insert(
+            Album(
+                8,
+                "iScreaM Vol.10: Next Level Remixes",
+                "에스파 (AESPA)",
+                R.drawable.img_album_exp3
+            )
+        )
+
+        songDB.albumDao().insert(
+            Album(
+                9,
+                "Map of the Soul Persona",
+                "뮤직 보이 (Music Boy)",
+                R.drawable.img_album_exp4,
+            )
+        )
+
+
+        songDB.albumDao().insert(
+            Album(
+                10,
+                "Great!",
+                "모모랜드 (MOMOLAND)",
+                R.drawable.img_album_exp5
+            )
+        )
+
+        songDB.albumDao().insert(
+            Album(
+                1,
+                "Fourever",
+                "DAY6",
+                R.drawable.img_album_happy
+            )
+        )
+        songDB.albumDao().insert(
+            Album(
+                2,
+                "Whiplash",
+                "에스파 (AESPA)",
+                R.drawable.img_album_whiplash
+            )
+        )
+        songDB.albumDao().insert(
+            Album(
+                3,
+                "Algorithm’s Blossom",
+                "QWER",
+                R.drawable.img_album_qwer
+            )
+        )
+        songDB.albumDao().insert(
+            Album(
+                4,
+                "POWER",
+                "G-DRAGON",
+                R.drawable.img_album_power
+            )
+        )
+        songDB.albumDao().insert(
+            Album(
+                5,
+                "APT.",
+                "로제 & 브루노 마스",
+                R.drawable.img_album_apt
+            )
+        )
+
+        val songDBData = songDB.albumDao().getAlbums()
+        Log.d("DB data", songDBData.toString())
+    }
+
+
     private fun startAutoSlide(adapter: HomeVPAdapter) {
         timer.scheduleAtFixedRate(3000, 3000) {
             handler.post {
@@ -123,9 +214,9 @@ class HomeFragment : Fragment(),CommunicationInterface  {
     override fun sendData(album: Album) {
         if (activity is MainActivity) {
             val activity = activity as MainActivity
-            activity.updateMainPlayerCl(album)
+            activity.updateMainPlayerCl(album.id) // 앨범 데이터를 사용하여 곡 재생
         }
-
     }
+
 
 }
