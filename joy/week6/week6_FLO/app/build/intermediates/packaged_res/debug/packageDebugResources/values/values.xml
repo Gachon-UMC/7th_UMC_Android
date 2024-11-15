@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="bold_gray_color">#959494</color>
+    <color name="colorAccent">#6bb2ff</color>
+    <color name="colorPrimary">#9cbee2</color>
+    <color name="colorPrimaryBlack">#252526</color>
+    <color name="colorPrimaryDark">#062342</color>
+    <color name="colorPrimaryGrey">#424242</color>
+    <color name="flo">#3f3fff</color>
+    <color name="form_error">#F11818</color>
+    <color name="gray_color">#a8a8a8</color>
+    <color name="light_gray_color">#E1E1E1</color>
+    <color name="lighter_gray_color">#F2F2F4</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="purple_light">#f3f4fe</color>
+    <color name="select_color">#3f3fff</color>
+    <color name="song_player">#3f3fff</color>
+    <color name="song_player_bg">#a8a8a8</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="transparent">#00ff0000</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">FLO</string>
+    <style name="CustomTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">19sp</item>
+    </style>
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground"> @drawable/splash2</item>
+        <item name="android:statusBarColor">@color/transparent</item>
+    </style>
+    <style name="StatusBarTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+    <style name="Theme.FLO" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        
+        
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+
+        
+        <item name="windowNoTitle">true</item>
+
+        
+        <item name="android:statusBarColor">@color/transparent</item>
+
+        <item name="fontFamily">@font/font_family</item>
+        <item name="android:includeFontPadding">false</item>
+
+    </style>
+</resources>

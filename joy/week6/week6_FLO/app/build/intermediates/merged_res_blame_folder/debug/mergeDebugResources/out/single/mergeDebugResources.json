@@ -1,0 +1,790 @@
+[
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_btn_miniplayer_next.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\btn_miniplayer_next.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_nugu_btn_pause_32.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\nugu_btn_pause_32.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\layout_fragment_banner.xml.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\layout\\fragment_banner.xml"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_img_album_exp4.jpg.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\img_album_exp4.jpg"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_img_ilust_cover_9.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\img_ilust_cover_9.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\anim_slide_out_right.xml.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\anim\\slide_out_right.xml"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_img_album_cover_3.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\img_album_cover_3.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\anim_slide_out_left.xml.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\anim\\slide_out_left.xml"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\color_tab_text_style.xml.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\color\\tab_text_style.xml"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_img_locker_no_saved_song.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\img_locker_no_saved_song.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_free_icon_sort_down.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\free_icon_sort_down.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_img_album_exp3.jpg.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\img_album_exp3.jpg"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\layout_fragment_homepanel1.xml.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\layout\\fragment_homepanel1.xml"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\layout_fragment_search.xml.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\layout\\fragment_search.xml"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_btn_main_ticket.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\btn_main_ticket.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_ic_bottom_my_select.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\ic_bottom_my_select.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_btn_actionbar_instagram.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\btn_actionbar_instagram.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\layout_fragment_song.xml.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\layout\\fragment_song.xml"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_btn_player_play.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\btn_player_play.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_img_ilust_cover_8.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\img_ilust_cover_8.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\layout_fragment_video.xml.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\layout\\fragment_video.xml"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_img_album_cover_4.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\img_album_cover_4.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_ic_main_instagram_btn.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\ic_main_instagram_btn.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_ic_bottom_home_select.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\ic_bottom_home_select.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\layout_fragment_homepanel2.xml.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\layout\\fragment_homepanel2.xml"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_btn_miniplayer_go_list.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\btn_miniplayer_go_list.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_btn_actionbar_close.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\btn_actionbar_close.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_img_album_cover_1.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\img_album_cover_1.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_playlist_shuffle_icon.xml.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\playlist_shuffle_icon.xml"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\layout_activity_song.xml.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\layout\\activity_song.xml"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_btn_textbox_close.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\btn_textbox_close.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_button_background_gray_color.xml.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\button_background_gray_color.xml"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_ic_bottom_home_no_select.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\ic_bottom_home_no_select.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_splash.xml.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\splash.xml"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_btn_miniplayer_play.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\btn_miniplayer_play.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_indicator_unselected.xml.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\indicator_unselected.xml"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_fragment_look_chip_off_background.xml.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\fragment_look_chip_off_background.xml"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_img_home_viewpager_exp.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\img_home_viewpager_exp.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_img_ilust_cover_7.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\img_ilust_cover_7.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_ic_bottom_search_no_select.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\ic_bottom_search_no_select.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\layout_item_saved_song.xml.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\layout\\item_saved_song.xml"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_nugu_btn_skip_next_32.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\nugu_btn_skip_next_32.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_ic_main_twitter.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\ic_main_twitter.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_img_album_exp.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\img_album_exp.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_ic_browse_arrow_right.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\ic_browse_arrow_right.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_ic_bottom_locker_no_select.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\ic_bottom_locker_no_select.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\anim_fade_out.xml.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\anim\\fade_out.xml"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_img_default_4_x_1.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\img_default_4_x_1.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_textview_background_radius.xml.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\textview_background_radius.xml"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_btm_color_selector.xml.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\btm_color_selector.xml"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_btn_player_more.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\btn_player_more.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_ic_main_youtube.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\ic_main_youtube.png"
+    },
+    {
+        "merged": "com.example.flo.app-debug-4:/layout_activity_song.xml.flat",
+        "source": "com.example.flo.app-main-6:/layout/activity_song.xml"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_ic_main_instagram.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\ic_main_instagram.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_button_background_white_color.xml.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\button_background_white_color.xml"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_apple_44.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\apple_44.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_btn_main_arrow_more.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\btn_main_arrow_more.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\layout_item_locker.xml.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\layout\\item_locker.xml"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\raw_music_road_to_hell.mp3.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\raw\\music_road_to_hell.mp3"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_ic_main_facebook.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\ic_main_facebook.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\font_noto_sans_regular.ttf.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\font\\noto_sans_regular.ttf"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\layout_fragment_detail.xml.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\layout\\fragment_detail.xml"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_ico_20_logo_tid_white.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\ico_20_logo_tid_white.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_img_ilust_cover_10.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\img_ilust_cover_10.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_naver_44.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\naver_44.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_img_home_panel3_album_1.jpg.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\img_home_panel3_album_1.jpg"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_btn_playlist_select_on.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\btn_playlist_select_on.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\anim_slide_in_right.xml.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\anim\\slide_in_right.xml"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_ic_main_twitter_btn.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\ic_main_twitter_btn.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_img_home_viewpager_exp2.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\img_home_viewpager_exp2.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\font_font_family.xml.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\font\\font_family.xml"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_img_album_exp2.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\img_album_exp2.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_ic_bottom_my_no_select.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\ic_bottom_my_no_select.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_img_album_cover_5.jpg.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\img_album_cover_5.jpg"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_img_home_panel3_album_2.jpg.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\img_home_panel3_album_2.jpg"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\layout_fragment_album.xml.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\layout\\fragment_album.xml"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\raw_music_price_and_son_theme_the_most_beautiful_thing_in_the_world.mp3.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\raw\\music_price_and_son_theme_the_most_beautiful_thing_in_the_world.mp3"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_img_ilust_cover_3.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\img_ilust_cover_3.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\anim_fade_in.xml.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\anim\\fade_in.xml"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_btn_titlebar_close.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\btn_titlebar_close.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_img_jenre_exp_2.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\img_jenre_exp_2.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_btn_playlist_select_off.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\btn_playlist_select_off.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_playlist_repeat_song_icon.xml.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\playlist_repeat_song_icon.xml"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_button_background_flo_color.xml.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\button_background_flo_color.xml"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_nugu_btn_repeat_inactive.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\nugu_btn_repeat_inactive.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\raw_music_mangrove_tree.mp3.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\raw\\music_mangrove_tree.mp3"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_btn_player_related.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\btn_player_related.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_img_home_panel1_album_2.jpg.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\img_home_panel1_album_2.jpg"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_img_ilust_cover_2.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\img_ilust_cover_2.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_img_jenre_exp_3.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\img_jenre_exp_3.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_img_ilust_cover_1.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\img_ilust_cover_1.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_btn_miniplay_mvpause.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\btn_miniplay_mvpause.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_btn_arrow_back.xml.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\btn_arrow_back.xml"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_main_btm_my_selector.xml.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\main_btm_my_selector.xml"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_ic_bottom_locker_select.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\ic_bottom_locker_select.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_discovery_banner_aos.jpg.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\discovery_banner_aos.jpg"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_btn_input_password_off.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\btn_input_password_off.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_ic_bottom_look_no_select.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\ic_bottom_look_no_select.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_home_pannel_album_cover_2.jpg.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\home_pannel_album_cover_2.jpg"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_img_splash_flo.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\img_splash_flo.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\layout_activity_splash.xml.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\layout\\activity_splash.xml"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\anim_anim_slide_in_from_left_fade_in.xml.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\anim\\anim_slide_in_from_left_fade_in.xml"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_btn_player_unlike_off.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\btn_player_unlike_off.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_fragment_look_chip_on_background.xml.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\fragment_look_chip_on_background.xml"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_btn_nugu.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\btn_nugu.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_btn_arrow_black.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\btn_arrow_black.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_img_home_panel1_album_1.jpg.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\img_home_panel1_album_1.jpg"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\anim_anim_slide_in_from_right_fade_in.xml.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\anim\\anim_slide_in_from_right_fade_in.xml"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_img_video_exp_2.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\img_video_exp_2.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_img_jenre_exp_1.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\img_jenre_exp_1.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_kakako_44.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\kakako_44.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_ic_my_like_on.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\ic_my_like_on.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_icon_browse_arrow_right.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\icon_browse_arrow_right.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_img_ilust_cover_4.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\img_ilust_cover_4.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_img_first_album_default.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\img_first_album_default.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_ic_my_like_off.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\ic_my_like_off.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_img_home_panel_background_3.jpg.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\img_home_panel_background_3.jpg"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\raw_music_anybody_have_a_map.mp3.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\raw\\music_anybody_have_a_map.mp3"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_btn_player_go_list.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\btn_player_go_list.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\anim_slide_in_left.xml.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\anim\\slide_in_left.xml"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_home_pannel_album_cover_1.jpg.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\home_pannel_album_cover_1.jpg"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\layout_fragment_home.xml.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_splash2.xml.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\splash2.xml"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_img_home_panel2_album_2.jpg.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\img_home_panel2_album_2.jpg"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_main_btm_search_selector.xml.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\main_btm_search_selector.xml"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\layout_fragment_look.xml.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\layout\\fragment_look.xml"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_main_btm_home_selector.xml.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\main_btm_home_selector.xml"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_btn_setting_phone.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\btn_setting_phone.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_btn_player_eq_off.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\btn_player_eq_off.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\layout_activity_main.xml.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_main_btm_look_selector.xml.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\main_btm_look_selector.xml"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_btn_panel_play_large.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\btn_panel_play_large.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_btn_miniplayer_previous.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\btn_miniplayer_previous.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_btn_main_mike.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\btn_main_mike.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_ic_flo_logo.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\ic_flo_logo.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_ic_main_facebook_btn.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\ic_main_facebook_btn.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_img_setting_icon_black.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\img_setting_icon_black.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_img_home_panel_background_1.jpg.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\img_home_panel_background_1.jpg"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_img_ilust_cover_5.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\img_ilust_cover_5.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_btn_arrow_more.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\btn_arrow_more.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\layout_fragment_songfile.xml.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\layout\\fragment_songfile.xml"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_btn_main_setting.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\btn_main_setting.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_button_background_black_color.xml.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\button_background_black_color.xml"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_ic_main_youtube_btn.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\ic_main_youtube_btn.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_flo_logo_icon.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\flo_logo_icon.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_img_home_panel_background_2.jpg.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\img_home_panel_background_2.jpg"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_btn_player_setting.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\btn_player_setting.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\raw_music_playing_pretend.mp3.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\raw\\music_playing_pretend.mp3"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_img_album_exp6.jpg.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\img_album_exp6.jpg"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_indicator_selected.xml.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\indicator_selected.xml"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_btn_miniplay_mvplay.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\btn_miniplay_mvplay.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_btn_miniplay_pause.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\btn_miniplay_pause.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_btn_toggle_on.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\btn_toggle_on.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\layout_item_album.xml.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\layout\\item_album.xml"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\layout_fragment_locker.xml.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\layout\\fragment_locker.xml"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_img_video_exp.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\img_video_exp.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_nugu_btn_play_32.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\nugu_btn_play_32.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_img_locker_screen_share_icon.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\img_locker_screen_share_icon.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_main_btm_color_selector.xml.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\main_btm_color_selector.xml"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_btn_toggle_off.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\btn_toggle_off.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_img_album_exp5.jpg.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\img_album_exp5.jpg"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_ic_bottom_look_select.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\ic_bottom_look_select.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_nugu_btn_down.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\nugu_btn_down.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_nugu_btn_skip_previous_32.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\nugu_btn_skip_previous_32.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_img_home_panel2_album_1.jpg.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\img_home_panel2_album_1.jpg"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\raw_music_old_love.mp3.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\raw\\music_old_love.mp3"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_btn_player_unlike_on.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\btn_player_unlike_on.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\anim_anim_fade_out.xml.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\anim\\anim_fade_out.xml"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_widget_black_play.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\widget_black_play.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_nugu_btn_random_inactive.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\nugu_btn_random_inactive.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\menu_bottom_nav_menu.xml.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\menu\\bottom_nav_menu.xml"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\layout_fragment_homepanel3.xml.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\layout\\fragment_homepanel3.xml"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_fragment_look_chart_background.xml.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\fragment_look_chart_background.xml"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_img_album_cover_2.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\img_album_cover_2.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_img_album_lp.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\img_album_lp.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_ic_bottom_search_select.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\ic_bottom_search_select.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_img_ilust_cover_6.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\img_ilust_cover_6.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_textview_background_select_color_radius.xml.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\textview_background_select_color_radius.xml"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_btn_input_password.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\btn_input_password.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\drawable_img_potcast_exp.png.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\drawable\\img_potcast_exp.png"
+    },
+    {
+        "merged": "C:\\Android\\daemon\\8.7\\com.example.flo.app-debug-4:\\layout_fragment_savedsong.xml.flat",
+        "source": "C:\\Android\\daemon\\8.7\\com.example.flo.app-main-6:\\layout\\fragment_savedsong.xml"
+    }
+]
