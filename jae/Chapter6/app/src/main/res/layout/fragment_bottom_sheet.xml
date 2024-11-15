@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="?android:attr/windowBackground">
+
+    <!-- 텍스트 및 버튼을 포함하는 LinearLayout -->
+    <TextView
+        android:id="@+id/selectAllText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="선택해제"
+        android:textSize="18sp"
+        android:textColor="@color/select_color"
+        android:paddingBottom="16dp"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/deleteButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="삭제"
+        android:textColor="@android:color/white"
+        android:background="@color/colorPrimary"/>
+
+</LinearLayout>
