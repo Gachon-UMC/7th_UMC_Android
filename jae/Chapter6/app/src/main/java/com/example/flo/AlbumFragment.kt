@@ -1,21 +1,22 @@
 package com.example.flo
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import androidx.core.view.WindowInsetsControllerCompat
 import com.example.flo.databinding.FragmentAlbumBinding
 import com.google.android.material.tabs.TabLayoutMediator
 import com.google.gson.Gson
 
 class AlbumFragment : Fragment() {
+    private lateinit var binding: FragmentAlbumBinding
+    private val information = arrayListOf("수록곡", "상세정보", "영상")
 
-    lateinit var binding: FragmentAlbumBinding
-    private var gson: Gson = Gson()
-
-    private var information = arrayListOf("수록곡", "상세정보", "영상")
+    private var isLiked: Boolean = false
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -24,57 +25,92 @@ class AlbumFragment : Fragment() {
     ): View? {
         binding = FragmentAlbumBinding.inflate(inflater, container, false)
 
-        val albumJson = arguments?.getString("album")
-        val album = gson.fromJson(albumJson, Album::class.java)
-        setInit(album)
+        val albumData = arguments?.getString("album")
+        val gson = Gson()
 
-        binding.btnArrowBackIv.setOnClickListener {
-            (context as MainActivity).supportFragmentManager.beginTransaction().replace(R.id.main_frm, HomeFragment()).commitAllowingStateLoss()
-        }
+        val album = gson.fromJson(albumData, Album::class.java)
+        isLiked = isLikedAlbum(album.id)
 
-//        val albumTitle = arguments?.getString("album_title")
-//        val artistName = arguments?.getString("album_artist")
-//
-//        Log.d("AlbumFragment", "Album Title: $albumTitle, Artist Name: $artistName")
-//
-//        if (albumTitle != null && artistName != null) {
-//            binding.albumTitleTv.text = albumTitle
-//            binding.albumArtistTv.text = artistName
-//        }
+        setViews(album)
+        initViewPager()
+        setClickListeners(album)
 
-        val albumAdapter = AlbumVPAdapter(this)
-        binding.albumContentVp.adapter = albumAdapter
-
-        TabLayoutMediator(binding.albumContentTb, binding.albumContentVp){
-            tab, position ->
-            tab.text = information[position]
-        }.attach()
 
         return binding.root
     }
 
-    private fun setInit(album: Album) {
-        binding.albumCoverIv.setImageResource(album.coverImg!!)
+    private fun setViews(album: Album) {
         binding.albumTitleTv.text = album.title.toString()
         binding.albumArtistTv.text = album.singer.toString()
+        binding.albumCoverIv.setImageResource(album.coverImg!!)
+
+        if(isLiked) {
+            binding.icMyLikeOffIv.setImageResource(R.drawable.ic_my_like_on)
+        } else {
+            binding.icMyLikeOffIv.setImageResource(R.drawable.ic_my_like_off)
+        }
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+    private fun setClickListeners(album: Album) {
+        val userId: Int = getJwt()
 
-        binding.albumTitleTv.isSelected = true
-        binding.albumTitleTv.visibility = View.VISIBLE
+        binding.icMyLikeOffIv.setOnClickListener {
+            if(isLiked) {
+                binding.icMyLikeOffIv.setImageResource(R.drawable.ic_my_like_off)
+                disLikeAlbum(userId, album.id)
+            } else {
+                binding.icMyLikeOffIv.setImageResource(R.drawable.ic_my_like_on)
+                likeAlbum(userId, album.id)
+            }
+
+            isLiked = !isLiked
+        }
+
+        //set click listener
+        binding.btnArrowBackIv.setOnClickListener {
+            (context as MainActivity).supportFragmentManager.beginTransaction()
+                .replace(R.id.main_frm, HomeFragment())
+                .commitAllowingStateLoss()
+        }
     }
 
-    override fun onStart() {
-        super.onStart()
-        val windowInsetsController = WindowInsetsControllerCompat(requireActivity().window, requireActivity().window.decorView)
-        windowInsetsController.isAppearanceLightStatusBars = true
+    private fun initViewPager() {
+        //init viewpager
+        val albumAdapter = AlbumVPAdapter(this)
+
+        binding.albumContentVp.adapter = albumAdapter
+        TabLayoutMediator(binding.albumContentTb, binding.albumContentVp) { tab, position ->
+            tab.text = information[position]
+        }.attach()
     }
 
-    override fun onStop() {
-        super.onStop()
-        val windowInsetsController = WindowInsetsControllerCompat(requireActivity().window, requireActivity().window.decorView)
-        windowInsetsController.isAppearanceLightStatusBars = false
+    private fun disLikeAlbum(userId: Int, albumId: Int) {
+        val songDB = SongDatabase.getInstance(requireContext())!!
+        songDB.albumDao().disLikeAlbum(userId, albumId)
+    }
+
+    private fun likeAlbum(userId: Int, albumId: Int) {
+        val songDB = SongDatabase.getInstance(requireContext())!!
+        val like = Like(userId, albumId)
+
+        songDB.albumDao().likeAlbum(like)
+    }
+
+
+    private fun isLikedAlbum(albumId: Int): Boolean {
+        val songDB = SongDatabase.getInstance(requireContext())!!
+        val userId = getJwt()
+
+        val likeId: Int? = songDB.albumDao().isLikedAlbum(userId, albumId)
+
+        return likeId != null
+    }
+
+    private fun getJwt(): Int {
+        val spf = activity?.getSharedPreferences("auth", AppCompatActivity.MODE_PRIVATE)
+        val jwt = spf!!.getInt("jwt", 0)
+        Log.d("MAIN_ACT/GET_JWT", "jwt_token: $jwt")
+
+        return jwt
     }
 }
