@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/sign_up_back_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="19dp"
+        android:layout_height="19dp"
+        android:scaleType="fitCenter"
+        android:layout_margin="20dp"
+        android:src="@drawable/btn_arrow_back"/>
+
+    <TextView
+        android:id="@+id/sign_up_main_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/sign_up_back_btn"
+        app:layout_constraintBottom_toBottomOf="@id/sign_up_back_btn"
+        android:text="회원가입"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryBlack"
+        android:textSize="21sp"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/sign_up_main_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sign_up_main_tv"
+        app:layout_constraintBottom_toTopOf="@id/sign_up_complete_btn"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:layout_marginBottom="150dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/sign_up_email_edit_tl"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/sign_up_pw_edit_tl"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/sign_up_email_char"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/EditTextGreyStyle"
+            android:theme="@style/EditTextGreyStyle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/sign_up_email_edit_tv"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:textColor="@color/colorPrimaryBlack"
+                android:hint="아이디(이메일)"
+                android:textSize="18sp"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/sign_up_email_char"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:text="\u0040"
+            android:textColor="@color/colorPrimaryBlack"
+            app:layout_constraintEnd_toStartOf="@id/sign_up_direct_tl"
+            app:layout_constraintBottom_toBottomOf="@id/sign_up_email_edit_tl"
+            app:layout_constraintStart_toEndOf="@id/sign_up_email_edit_tl"
+            app:layout_constraintTop_toTopOf="@id/sign_up_email_edit_tl"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/sign_up_direct_tl"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/sign_up_email_char"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/EditTextGreyStyle"
+            android:theme="@style/EditTextGreyStyle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/sign_up_direct_edit_tv"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:textColor="@color/colorPrimaryBlack"
+                android:hint="선택"
+                android:textSize="18sp"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageView
+            android:id="@+id/sign_up_drop_down_btn"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:layout_constraintEnd_toEndOf="@id/sign_up_direct_tl"
+            app:layout_constraintTop_toTopOf="@id/sign_up_direct_tl"
+            app:layout_constraintBottom_toBottomOf="@id/sign_up_direct_tl"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/nugu_btn_down"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/sign_up_pw_edit_tl"
+            app:layout_constraintTop_toBottomOf="@id/sign_up_email_edit_tl"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/EditTextGreyStyle"
+            android:theme="@style/EditTextGreyStyle"
+            app:endIconMode="password_toggle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/sign_up_pw_edit_tv"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/colorPrimaryBlack"
+                android:hint="비밀번호"
+                android:inputType="textPassword"
+                android:textSize="18sp"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/sign_up_pw_check_edit_tl"
+            app:layout_constraintTop_toBottomOf="@id/sign_up_pw_edit_tl"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/EditTextGreyStyle"
+            android:theme="@style/EditTextGreyStyle"
+            app:endIconMode="password_toggle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/log_in_pw_check_edit_tv"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/colorPrimaryBlack"
+                android:hint="비밀번호 확인"
+                android:textSize="18sp"
+                android:inputType="textPassword"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/sign_up_user_info_edit_tl"
+            app:layout_constraintTop_toBottomOf="@id/sign_up_pw_check_edit_tl"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/sign_up_email_char"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/EditTextGreyStyle"
+            android:theme="@style/EditTextGreyStyle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/sign_up_user_info_edit_tv"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:textColor="@color/colorPrimaryBlack"
+                android:hint="생년월일 (ex.900726)"
+                android:textSize="18sp"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/sign_up_user_info_char"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:text="-"
+            android:textColor="@color/colorPrimaryBlack"
+            app:layout_constraintEnd_toStartOf="@id/sign_up_birth_edit_tl"
+            app:layout_constraintBottom_toBottomOf="@id/sign_up_birth_edit_tl"
+            app:layout_constraintStart_toEndOf="@id/sign_up_user_info_edit_tl"
+            app:layout_constraintTop_toTopOf="@id/sign_up_birth_edit_tl"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/sign_up_birth_edit_tl"
+            app:layout_constraintTop_toBottomOf="@id/sign_up_pw_check_edit_tl"
+            app:layout_constraintStart_toEndOf="@id/sign_up_user_info_char"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/EditTextGreyStyle"
+            android:theme="@style/EditTextGreyStyle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/sign_up_birth_edit_tv"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:textColor="@color/colorPrimaryBlack"
+                android:hint="○●●●●●●"
+                android:textSize="18sp"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/sign_up_complete_btn"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center"
+        android:text="가입 완료"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:background="@color/select_color"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
