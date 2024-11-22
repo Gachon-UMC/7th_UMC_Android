@@ -15,6 +15,7 @@ class AlbumFragment : Fragment() {
     lateinit var binding: FragmentAlbumBinding
     private var gson: Gson = Gson()
     private val information = arrayListOf("수록곡", "상세정보", "영상")
+    private var isLiked : Boolean = false
 
 
     override fun onCreateView(
@@ -24,23 +25,46 @@ class AlbumFragment : Fragment() {
     ): View? {
         binding = FragmentAlbumBinding.inflate(inflater, container, false)
 
-        val albumToJson = arguments?.getString("album")
-        val album = gson.fromJson(albumToJson, Album::class.java)
+        val albumData = arguments?.getString("album")
+        val gson = Gson()
 
-        setInit(album)
+        val album = gson.fromJson(albumData, Album::class.java)
+        isLiked = isLikedAlbum(album.id)
+
+        setViews(album)
         initViewPager()
         setClickListeners(album)
 
         return binding.root
     }
 
-    private fun setInit(album : Album) {
-        binding.albumAlbumIv.setImageResource(album.coverImage!!)
+    private fun setViews(album: Album) {
         binding.albumMusicTitleTv.text = album.title.toString()
         binding.albumSingerNameTv.text = album.singer.toString()
+        binding.albumAlbumIv.setImageResource(album.coverImage!!)
+
+        if(isLiked) {
+            binding.albumLikeIv.setImageResource(R.drawable.ic_my_like_on)
+        } else {
+            binding.albumLikeIv.setImageResource(R.drawable.ic_my_like_off)
+        }
     }
 
     private fun setClickListeners(album: Album) {
+        val userId: Int = getJwt()
+
+        binding.albumLikeIv.setOnClickListener {
+            if (isLiked) {
+                binding.albumLikeIv.setImageResource(R.drawable.ic_my_like_off)
+                disLikeAlbum(userId, album.id)
+            } else {
+                binding.albumLikeIv.setImageResource(R.drawable.ic_my_like_on)
+                likeAlbum(userId, album.id)
+            }
+
+            isLiked = !isLiked
+        }
+
         binding.albumBackIv.setOnClickListener {
             (context as MainActivity).supportFragmentManager.beginTransaction()
                 .replace(R.id.main_frm, HomeFragment())
@@ -54,6 +78,37 @@ class AlbumFragment : Fragment() {
         TabLayoutMediator(binding.albumContentTb, binding.albumContentVp) { tab, position ->
             tab.text = information[position]
         }.attach()
+    }
+
+
+    private fun disLikeAlbum(userId: Int, albumId: Int) {
+        val songDB = SongDatabase.getInstance(requireContext())!!
+        songDB.albumDao().disLikeAlbum(userId, albumId)
+    }
+
+    private fun likeAlbum(userId: Int, albumId: Int) {
+        val songDB = SongDatabase.getInstance(requireContext())!!
+        val like = Like(userId, albumId)
+
+        songDB.albumDao().likeAlbum(like)
+    }
+
+
+    private fun isLikedAlbum(albumId: Int): Boolean {
+        val songDB = SongDatabase.getInstance(requireContext())!!
+        val userId = getJwt()
+
+        val likeId: Int? = songDB.albumDao().isLikedAlbum(userId, albumId)
+
+        return likeId != null
+    }
+
+    private fun getJwt(): Int {
+        val spf = activity?.getSharedPreferences("auth", AppCompatActivity.MODE_PRIVATE)
+        val jwt = spf!!.getInt("jwt", 0)
+        Log.d("MAIN_ACT/GET_JWT", "jwt_token: $jwt")
+
+        return jwt
     }
 
 

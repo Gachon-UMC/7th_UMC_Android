@@ -358,25 +358,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun updateMainPlayerCl(albumIdx: Int) {
-        // 앨범의 곡 목록을 가져오기
-        val albumSongs = songDB.albumDao().getAlbumSongs(albumIdx) // 앨범 인덱스를 통한 곡 목록 가져오기
+        // 앨범 가져오기
+        val album = songDB.albumDao().getAlbum(albumIdx) // 단일 Album 객체를 가져옴
 
-        // 앨범의 곡이 존재하는 경우
-        if (albumSongs.isNotEmpty()) {
-            nowPos = 0 // 앨범의 첫 번째 곡으로 설정
-            songs.addAll(0, albumSongs)
-
-            // 미니 플레이어 UI 업데이트
-            setMiniPlayer(songs[nowPos])
-            initMediaPlayer() // MediaPlayer 초기화
-
-            if (mediaPlayer != null) {
-                mediaPlayer?.start()
-                songs[nowPos].isPlaying = true
-                binding.mainMiniplayerBtn.visibility = View.GONE
-                binding.mainPauseBtn.visibility = View.VISIBLE
-            }
-        }
+        // 앨범이 존재하고 곡 목록이 있는 경우
     }
 
 
@@ -441,7 +426,7 @@ class MainActivity : AppCompatActivity() {
             if (songs[nowPos].isPlaying) {
                 mediaPlayer?.start()
             }
-            
+
             else if (nowPos + direct >= songs.size){
                 CustomSnackbar.make(binding.root, "마지막 곡입니다").show()
             }

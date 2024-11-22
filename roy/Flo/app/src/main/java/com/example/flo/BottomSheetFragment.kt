@@ -13,7 +13,6 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 class BottomSheetFragment : BottomSheetDialogFragment() {
 
     lateinit var binding : FragmentBottomSheetBinding
-    private var onDeleteClickListener: (() -> Unit)? = null // 삭제 클릭 리스너
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -48,15 +47,10 @@ class BottomSheetFragment : BottomSheetDialogFragment() {
         }
 
         binding.bottomSheetIv4.setOnClickListener {
-            onDeleteClickListener?.invoke() // 삭제 클릭 리스너 호출
-            dismiss() // 바텀 시트 숨기기
             Toast.makeText(requireActivity(), "삭제 버튼 클릭", Toast.LENGTH_SHORT).show()
         }
     }
 
 
-    fun setOnDeleteClickListener(listener: () -> Unit) {
-        onDeleteClickListener = listener
-    }
 }
 
