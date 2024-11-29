@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/locker_album_cv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardCornerRadius="3dp"
+        app:cardElevation="0dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="10dp">
+
+        <ImageView
+            android:id="@+id/locker_album_iv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/img_album_cover_5"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/saved_album_tv_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@id/locker_album_cv"
+        app:layout_constraintTop_toTopOf="@id/locker_album_cv"
+        app:layout_constraintBottom_toBottomOf="@id/locker_album_cv">
+
+        <TextView
+            android:id="@+id/locker_album_title_tv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/locker_album_artist_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:maxWidth="200dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:text="앨범 제목"/>
+
+        <TextView
+            android:id="@+id/locker_album_artist_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/locker_album_title_tv"
+            app:layout_constraintBottom_toTopOf="@id/locker_album_date_tv"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:maxWidth="200dp"
+            android:text="아티스트"
+            android:textSize="14sp"
+            android:textColor="@color/bold_gray_color"/>
+
+        <TextView
+            android:id="@+id/locker_album_date_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/locker_album_artist_tv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="2024.11.19"
+            android:textSize="14sp"
+            android:textColor="@color/bold_gray_color"/>
+
+        <TextView
+            android:id="@+id/char1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="2dp"
+            android:paddingEnd="2dp"
+            android:gravity="center"
+            app:layout_constraintStart_toEndOf="@id/locker_album_date_tv"
+            app:layout_constraintEnd_toStartOf="@id/locker_album_type_tv"
+            app:layout_constraintTop_toTopOf="@id/locker_album_date_tv"
+            app:layout_constraintBottom_toBottomOf="@id/locker_album_date_tv"
+            android:text="|"
+            android:textColor="@color/light_gray_color"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/locker_album_type_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/locker_album_date_tv"
+            app:layout_constraintBottom_toBottomOf="@id/locker_album_date_tv"
+            app:layout_constraintStart_toEndOf="@id/char1"
+            app:layout_constraintEnd_toStartOf="@id/char2"
+            android:text="싱글"
+            android:textSize="14sp"
+            android:textColor="@color/bold_gray_color"/>
+
+        <TextView
+            android:id="@+id/char2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="2dp"
+            android:paddingEnd="2dp"
+            android:gravity="center"
+            app:layout_constraintStart_toEndOf="@id/locker_album_type_tv"
+            app:layout_constraintEnd_toStartOf="@id/locker_album_genre_tv"
+            app:layout_constraintTop_toTopOf="@id/locker_album_date_tv"
+            app:layout_constraintBottom_toBottomOf="@id/locker_album_date_tv"
+            android:text="|"
+            android:textColor="@color/light_gray_color"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/locker_album_genre_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/char2"
+            app:layout_constraintTop_toTopOf="@id/locker_album_date_tv"
+            app:layout_constraintBottom_toBottomOf="@id/locker_album_date_tv"
+            android:text="장르"
+            android:textColor="@color/bold_gray_color"
+            android:textSize="14sp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/saved_album_btn_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/saved_album_play_btn"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@drawable/btn_miniplayer_play"/>
+
+        <ImageView
+            android:id="@+id/saved_album_pause_btn"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:visibility="invisible"
+            android:padding="3dp"
+            android:src="@drawable/btn_miniplay_pause"/>
+
+        <ImageView
+            android:id="@+id/saved_album_btn_more"
+            android:layout_width="10dp"
+            android:layout_height="32dp"
+            android:src="@drawable/btn_player_more"
+            android:layout_marginStart="15dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toEndOf="@id/saved_album_play_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
