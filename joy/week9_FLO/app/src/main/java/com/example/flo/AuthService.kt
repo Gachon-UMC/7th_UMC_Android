@@ -51,7 +51,12 @@ class AuthService {
     fun logIn(user : User) {
         val authService = getRetrofit().create(AuthRetrofitInterface::class.java)
 
-        authService.logIn(user).enqueue(object : Callback<AuthResponse> {
+        val loginRequest = LoginRequest(
+            email = user.email,
+            password = user.password
+        )
+
+        authService.logIn(loginRequest).enqueue(object : Callback<AuthResponse> {
             override fun onResponse(call: Call<AuthResponse>, response: Response<AuthResponse>) {
                 Log.d("LOGIN/SUCCESS", response.toString())
                 Log.d("LOGIN/RESPONSE_CODE", response.code().toString())
