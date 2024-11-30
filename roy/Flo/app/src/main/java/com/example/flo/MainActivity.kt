@@ -445,6 +445,13 @@ class MainActivity : AppCompatActivity() {
         saveCurrentPosition()  // 앱이 일시 중지될 때 재생 위치 저장
         mediaPlayer?.pause()
     }
+
+
+    private fun getJwt() : String? {
+        val spf = this.getSharedPreferences("auth2", MODE_PRIVATE)
+
+        return spf!!.getString("jwt", "")
+    }
 }
 
 
