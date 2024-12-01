@@ -1,0 +1,58 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.FLO" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+
+        <!-- Remove the title bar -->
+        <item name="windowNoTitle">true</item>
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/transparent</item>
+
+        <item name="fontFamily">@font/font_family</item>
+        <item name="android:includeFontPadding">false</item>
+
+    </style>
+
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground"> @drawable/splash2</item>
+        <item name="android:statusBarColor">@color/transparent</item>
+    </style>
+
+    <style name="StatusBarTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="CustomTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">19sp</item>
+    </style>
+
+    <style name="EditTextGreyStyle" parent="Widget.Design.TextInputLayout"> // important : parent 를 이것으로.
+
+        <item name="colorControlNormal">#DFE1E4</item>  // unFocus 상태일때 밑줄 색.
+        <item name="colorControlActivated">@color/colorPrimaryBlack</item> // Focus 상태일때 밑줄 색.
+        <item name="android:textCursorDrawable">@color/select_color</item>  // cursor 색.
+
+
+        <item name="boxStrokeWidthFocused">0.5dp</item>
+
+        <item name="android:textColorHint">@color/gray_color</item>  // hint 색
+        <item name="hintTextColor">@color/gray_color</item>   // floating hint 색
+
+        <item name="errorTextColor">@color/design_default_color_error</item>
+
+    </style>
+
+
+</resources>
