@@ -12,6 +12,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import com.example.flo.databinding.ActivityMainBinding
 import com.google.gson.Gson
+import com.kakao.sdk.common.util.Utility
 
 
 class MainActivity : AppCompatActivity() {
@@ -32,6 +33,9 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val keyHash = Utility.getKeyHash(this)
+        Log.d("Hash", keyHash)
 
         inputDummySongs()
         initPlayList()
