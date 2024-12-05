@@ -10,7 +10,14 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.core.view.WindowCompat
+import com.example.flo.data.entities.Song
 import com.example.flo.databinding.ActivityMainBinding
+import com.example.flo.ui.main.home.HomeFragment
+import com.example.flo.ui.main.locker.LockerFragment
+import com.example.flo.ui.main.look.LookFragment
+import com.example.flo.ui.main.search.SearchFragment
+import com.example.flo.ui.song.SongActivity
+import com.example.flo.ui.song.SongDatabase
 import com.google.gson.Gson
 
 class MainActivity : AppCompatActivity() {
@@ -260,15 +267,20 @@ class MainActivity : AppCompatActivity() {
         if (albums.isNotEmpty()) return
 
         songDB.songDao().insert(
-            Song("라일락", "아이유 (IU)", 60, 0, false, "music_lilac", R.drawable.img_album_cover_5, false, 1))
+            Song("라일락", "아이유 (IU)", 60, 0, false, "music_lilac", R.drawable.img_album_cover_5, false, 1)
+        )
         songDB.songDao().insert(
-            Song("이 지금", "아이유 (IU)", 60, 0, false, "music_dlwlrma", R.drawable.img_album_cover_4, false, 1))
+            Song("이 지금", "아이유 (IU)", 60, 0, false, "music_dlwlrma", R.drawable.img_album_cover_4, false, 1)
+        )
         songDB.songDao().insert(
-            Song("을의 연애 (WITH 박주원)", "아이유 (IU)", 60, 0, false, "music_loveofb", R.drawable.img_album_cover_3, false, 1))
+            Song("을의 연애 (WITH 박주원)", "아이유 (IU)", 60, 0, false, "music_loveofb", R.drawable.img_album_cover_3, false, 1)
+        )
         songDB.songDao().insert(
-            Song("비밀", "아이유 (IU)", 60, 0, false, "music_secret", R.drawable.img_album_cover_2, false, 1))
+            Song("비밀", "아이유 (IU)", 60, 0, false, "music_secret", R.drawable.img_album_cover_2, false, 1)
+        )
         songDB.songDao().insert(
-            Song("바라보기", "아이유 (IU)", 60, 0, false, "music_lookingatyou", R.drawable.img_album_cover_1, false, 1))
+            Song("바라보기", "아이유 (IU)", 60, 0, false, "music_lookingatyou", R.drawable.img_album_cover_1, false, 1)
+        )
 
         val _album = songDB.albumDao().getAlbums()
         Log.d("Album DB data", _album.toString())
@@ -281,15 +293,20 @@ class MainActivity : AppCompatActivity() {
         if (songs.isNotEmpty()) return
 
         songDB.songDao().insert(
-            Song("라일락", "아이유 (IU)", 60, 0, false, "music_lilac", R.drawable.img_album_cover_5, false, 1))
+            Song("라일락", "아이유 (IU)", 60, 0, false, "music_lilac", R.drawable.img_album_cover_5, false, 1)
+        )
         songDB.songDao().insert(
-            Song("이 지금", "아이유 (IU)", 60, 0, false, "music_dlwlrma", R.drawable.img_album_cover_4, false, 1))
+            Song("이 지금", "아이유 (IU)", 60, 0, false, "music_dlwlrma", R.drawable.img_album_cover_4, false, 1)
+        )
         songDB.songDao().insert(
-            Song("을의 연애 (WITH 박주원)", "아이유 (IU)", 60, 0, false, "music_loveofb", R.drawable.img_album_cover_3, false, 1))
+            Song("을의 연애 (WITH 박주원)", "아이유 (IU)", 60, 0, false, "music_loveofb", R.drawable.img_album_cover_3, false, 1)
+        )
         songDB.songDao().insert(
-            Song("비밀", "아이유 (IU)", 60, 0, false, "music_secret", R.drawable.img_album_cover_2, false, 1))
+            Song("비밀", "아이유 (IU)", 60, 0, false, "music_secret", R.drawable.img_album_cover_2, false, 1)
+        )
         songDB.songDao().insert(
-            Song("바라보기", "아이유 (IU)", 60, 0, false, "music_lookingatyou", R.drawable.img_album_cover_1, false, 1))
+            Song("바라보기", "아이유 (IU)", 60, 0, false, "music_lookingatyou", R.drawable.img_album_cover_1, false, 1)
+        )
 
         val _songs = songDB.songDao().getSongs()
         Log.d("Song DB data", _songs.toString())
