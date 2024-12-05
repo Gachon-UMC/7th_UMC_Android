@@ -3,6 +3,7 @@ package com.example.flo
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
+import com.example.flo.data.entities.User
 
 @Dao
 interface UserDao {

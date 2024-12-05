@@ -3,6 +3,7 @@ package com.example.flo
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.flo.data.entities.ChartSong
 import com.example.flo.databinding.ItemChartSongBinding
 
 class ChartSongRVAdapter(private val chartSong: List<ChartSong>) : RecyclerView.Adapter<ChartSongRVAdapter.ChartSongViewHolder>() {
